@@ -24,14 +24,24 @@ function draw() {
     // A grey background
     background(150, 150, 150);
 
-   // A red circle with a white outline in the centre of the canvas
-    // First we PUSH to remember the previous settings
+   // The main part of the record is red
     push();
-    // Then we change the settings for this shape (fill and stroke here)
     fill(255, 0, 0);
     stroke(255, 255, 255);
-    // Then we draw the shape
     ellipse(320, 320, 480, 480);
-    // Finally we POP to restore the original settings
+    pop();
+
+    // The label on the record
+    push();
+    fill(255, 255, 255);
+    noStroke();
+    ellipse(320, 320, 140, 140);
+    pop();
+
+    // The hole in the record
+    push();
+    fill(150, 150, 150);
+    stroke(50, 50, 50);
+    ellipse(320, 320, 20, 20);
     pop();
 }
