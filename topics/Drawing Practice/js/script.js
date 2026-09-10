@@ -24,8 +24,14 @@ function draw() {
     // A grey background
     background(150, 150, 150);
 
-    // A red circle with a white outline in the centre of the canvas
+   // A red circle with a white outline in the centre of the canvas
+    // First we PUSH to remember the previous settings
+    push();
+    // Then we change the settings for this shape (fill and stroke here)
     fill(255, 0, 0);
     stroke(255, 255, 255);
+    // Then we draw the shape
     ellipse(320, 320, 480, 480);
+    // Finally we POP to restore the original settings
+    pop();
 }
