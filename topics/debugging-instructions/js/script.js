@@ -13,7 +13,7 @@
  * Creates the canvas
 */
 function setup() {
-    createCanva(500, 500);
+    createCanvas(500, 500);
 }
 
 
@@ -22,16 +22,17 @@ function setup() {
 */
 function draw() {
     // Pink background
-    background(255, 150);
+    background(255, 150, 150);
 
     // Draw the bug
-    drawBug();
+    drawInsect();
 }
 
 function drawInsect() {
     drawBody();
+    drawLegs();
     drawAntennae();
-    drawEye();
+    drawEyes();
 }
 
 /**
@@ -61,13 +62,13 @@ function drawLegs() {
 /**
  * Draws the antennae of the bug
  */
-function drawAntennae({
+function drawAntennae() {
     push();
-strok(0);
-strokeWeight(5);
-line(250, 250, 200, 50);
-line(250, 250, 300, 50);
-pop();
+    stroke(0);
+    strokeWeight(5);
+    line(250, 250, 200, 50);
+    line(250, 250, 300, 50);
+    pop();
 }
 
 /**
@@ -77,6 +78,7 @@ function drawEyes() {
     push();
     fill(255, 0, 0);
     noStroke();
-    ellipse(200, 150, 15);
-    ellipse(300, 150, 15);
+    ellipse(200, 150, 15, 15);
+    ellipse(300, 150, 15, 15);
     pop();
+}
