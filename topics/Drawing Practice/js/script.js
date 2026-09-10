@@ -23,6 +23,9 @@ function setup() {
 function draw() {
     // A grey background
     background(150, 150, 150);
-    // A circle in the centre of the canvas
+
+    // A red circle with a white outline in the centre of the canvas
+    fill(255, 0, 0);
+    stroke(255, 255, 255);
     ellipse(320, 320, 480, 480);
 }
