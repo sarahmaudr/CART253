@@ -12,7 +12,8 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-
+    // A nice square canvas to work with
+    createCanvas(640, 640);
 }
 
 
@@ -20,5 +21,7 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+    // A grey background
+    background(150, 150, 150);
 
 }
