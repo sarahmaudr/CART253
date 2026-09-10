@@ -1,15 +1,19 @@
 /**
- * Drawing is Fun !
+ * The Red Album
  * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Draws a bright red vinyl record on the canvas.
+ * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
+ * 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creates the canvas
 */
 function setup() {
     // A nice square canvas to work with
@@ -18,7 +22,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws a bright red record
 */
 function draw() {
     // A grey background
