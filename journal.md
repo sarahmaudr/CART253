@@ -12,3 +12,4 @@ The main challenge was using the correct file path to link my banner image. I wa
 I hope the future audience for my work will think my website is well-organized and clear. As I move forward in this course, I look forward to exploring creative web prototyping and using new tools.
 
 ![Website Preview](images/Screenshot%202026-09-11.png)
+
