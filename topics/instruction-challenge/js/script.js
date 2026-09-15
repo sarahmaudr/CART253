@@ -27,6 +27,8 @@ function draw() {
     drawSky();
     drawSun();
     drawClouds();
+    drawMountains();
+    drawFlowers();
 }
 
 function drawSky(){
@@ -47,7 +49,7 @@ function drawClouds(){
 // drawing clouds
     push();
     noStroke();
-    fill(255);
+    fill("white");
     ellipse(300, 100, 75, 75);
     ellipse(260, 115, 60, 60);
     ellipse(300, 125, 75, 75);
@@ -62,5 +64,21 @@ function drawClouds(){
     ellipse(485, 215, 60, 60);
     ellipse(525, 225, 75, 75);
     ellipse(565, 215, 60, 60);
-    
+    pop();
 }
+
+function drawMountains(){
+// drawing mountains
+    push();
+    noStroke();
+    fill("darkgreen");
+    ellipse(0, 600, 1500, 600);
+    pop();
+
+    push();
+    noStroke();
+    fill("green");
+    ellipse(1000, 600, 1500, 600);
+    pop();
+}
+
