@@ -1,5 +1,5 @@
 /**
- * Title of Project
+ * Poppy fields
  * Athanasia Iliopoulos, Razan Elsaygh, Sarah-Maude Roy
  * 
  * Drawing a landscape
@@ -29,6 +29,7 @@ function draw() {
     drawClouds();
     drawMountains();
     drawFlowers();
+    drawBirds();
 }
 
 function drawSky(){
@@ -106,5 +107,16 @@ function drawFlowers(){
     circle(700, 400, 25);
     circle(825, 425, 25);
     circle(950, 400, 25);
+    pop();
+}
+
+function drawBirds(){
+//drawing birds
+    push();
+    strokeWeight(10);
+    stroke("black");
+    noFill();
+    arc(300, 200, 200, 75, PI, PI + QUARTER_PI);
+    arc(150, 200, 100, 50, PI + QUARTER_PI, TWO_PI);
     pop();
 }
