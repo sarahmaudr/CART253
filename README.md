@@ -1,4 +1,4 @@
-# CART253
+# Sarah-Maude's prototyping website
 
 ![Course Banner](images/space.png)
 
