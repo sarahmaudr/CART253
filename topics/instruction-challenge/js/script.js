@@ -1,9 +1,12 @@
 /**
  * Title of Project
- * Author Name
+ * Athanasia Iliopoulos, Razan Elsaygh, Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Drawing a landscape
+ * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";
