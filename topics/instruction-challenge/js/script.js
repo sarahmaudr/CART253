@@ -82,3 +82,29 @@ function drawMountains(){
     pop();
 }
 
+function drawFlowers(){
+// drawing flowers
+    push();
+    noStroke();
+    fill("red");
+    circle(100, 400, 50);
+    circle(250, 425, 50);
+    circle(400, 400, 50);
+    circle(525, 425, 50);
+    circle(700, 400, 50);
+    circle(825, 425, 50);
+    circle(950, 400, 50);
+    pop();
+
+    push();
+    stroke("yellow")
+    fill("black");
+    circle(100, 400, 25);
+    circle(250, 425, 25);
+    circle(400, 400, 25);
+    circle(525, 425, 25);
+    circle(700, 400, 25);
+    circle(825, 425, 25);
+    circle(950, 400, 25);
+    pop();
+}
