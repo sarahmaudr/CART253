@@ -1,6 +1,6 @@
-# TITLE OF PROJECT
+# DRAGONFLY
 
-AUTHOR NAME
+Sarah-Maude Roy
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
