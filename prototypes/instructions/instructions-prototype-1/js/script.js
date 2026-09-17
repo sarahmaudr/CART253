@@ -29,9 +29,16 @@ function draw() {
 
 function drawBackground(){
 // drawing the background a solid color
-    background(75,255,50);
+    background("green");
 }
 
 function drawWings(){
-
+// drawing the wings for the dragonfly
+    push();
+    fill("lightGrey");
+    ellipse(300, 350, 200, 75);
+    ellipse(500, 350, 200, 75);
+    ellipse(250, 300, 300, 75);
+    ellipse(550, 300, 300, 75);
+    pop();
 }
