@@ -1,24 +1,37 @@
 /**
- * Title of Project
- * Author Name
+ * Dragonfly
+ * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Drawing a dragonfly
+ * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * creating a canvas
 */
 function setup() {
-
+    createCanvas(800,800);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * creating the drawing
 */
 function draw() {
+    drawBackground();
+    drawWings();
+}
+
+function drawBackground(){
+// drawing the background a solid color
+    background(75,255,50);
+}
+
+function drawWings(){
 
 }
