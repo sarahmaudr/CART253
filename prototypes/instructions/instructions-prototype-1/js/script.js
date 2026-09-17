@@ -25,6 +25,7 @@ function setup() {
 function draw() {
     drawBackground();
     drawWings();
+    drawingHead();
 }
 
 function drawBackground(){
@@ -40,5 +41,13 @@ function drawWings(){
     ellipse(500, 350, 200, 75);
     ellipse(250, 300, 300, 75);
     ellipse(550, 300, 300, 75);
+    pop();
+}
+
+function drawingHead(){
+// drawing the head for of the dragonfly
+    push();
+    fill("black");
+    circle(400, 280, 45);
     pop();
 }
