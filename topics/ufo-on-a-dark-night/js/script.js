@@ -42,6 +42,10 @@ function draw() {
     // The UFO goes up
     // We have lift-off!
     ufo.y = ufo.y - 2;
+
+    // Change the color of UFO
+    ufo.fill = ufo.fill * 0.999;
+
     // Draw the UFO based on its properties
     push();
     fill(ufo.fill);
