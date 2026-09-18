@@ -16,10 +16,24 @@ let bird = {
     // We've added a velocity property to track the bird's velocity
     velocity: {
         // It has x and y properties so we can move the bird in both directions
-        x: 1,
+        x: 0,
         // The y is negative because we want the bird to go UP
-        y: -2
+        y: 0,
     },
+    // The minimum velocity for x and y movement. Note that it's NOT ZERO
+    // because we use negative x velocity to move left and negative y
+    // velocity to move up
+    minVelocity: {
+      // Assuming that birds move faster horizontally than vertically...
+      x: -3,
+      y: -2  
+    },
+    // NEW! Same again with the maximum velocity
+    maxVelocity: {
+        x: 3,
+        y: 2
+    },
+
     //We now have acceleration properties, these will be ADDED to the
     // velocity every frame
     acceleration: {
@@ -47,8 +61,12 @@ function draw() {
     bird.velocity.x = bird.velocity.x + bird.acceleration.x;
     bird.velocity.y = bird.velocity.y + bird.acceleration.y;
 
+    //Constrain the bird's velocity
+    bird.velocity.x = constrain(bird.velocity.x, bird.minVelocity.x, bird.maxVelocity.x);
+    bird.velocity.y = constrain(bird.velocity.y, bird.minVelocity.y, bird.maxVelocity.y);
+
     // Move the bird by adding its velocity in x and y
-    bird.x = bird.x + bird.velocity.x;
+    bird.x += bird.velocity.x;
     bird.y = bird.y - bird.velocity.y;
     
     // Draw the bird
