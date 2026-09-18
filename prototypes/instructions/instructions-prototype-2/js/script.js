@@ -29,6 +29,7 @@ function draw() {
 }
 
 function drawMirrors() {
+    // draw triangles that change color with the movement of the mouse of the user.
     background(0);
     push();
     noStroke();
