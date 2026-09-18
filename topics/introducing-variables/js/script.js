@@ -25,12 +25,15 @@ function setup() {
 */
 function draw() {
     background(0);
+
 //Draw a circle in the centre of the canvas
     push();
     noStroke();
-    fill(255, 255, 0);
+    //draw a circle that changes color based on the mouse position
+    fill(mouseX, mouseY, 0);
     // adding variables
     // mouseX and mouseY to make our circle move !
-    ellipse(mouseX, mouseY, 100, 100);
+    // Now we change the size of the circle. 
+    ellipse(width/2, height/2, 100, 100);
     pop();
 }
