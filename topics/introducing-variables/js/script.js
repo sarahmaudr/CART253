@@ -28,6 +28,7 @@ function draw() {
     push();
     noStroke();
     fill(255, 255, 0);
-    ellipse(320, 320, 100, 100);
+    // adding variables
+    ellipse(width/2, height/2, 100, 100);
     pop();
 }
