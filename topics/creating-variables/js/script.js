@@ -11,6 +11,9 @@
 
 "use strict";
 
+// declare variable 'holeSize' so that we can use it later in our code
+let holeSize = 180;
+
 /**
  * Creates a 480x480 canvas
 */
@@ -32,6 +35,6 @@ function draw() {
     noStroke();
     fill(0);
     // Drawing a circle (works the same as circle())
-    ellipse(140, 175, 180);
+    ellipse(140, 175, holeSize);
     pop();
 }
