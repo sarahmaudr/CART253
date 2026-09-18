@@ -20,7 +20,7 @@ let ufo = {
 };
 
 // Shade to fill the sky (background)
-let skyShade = 0;
+let skyShade = skyShade + 1;
 
 /**
  * Creates the canvas
