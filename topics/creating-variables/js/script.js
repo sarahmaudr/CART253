@@ -1,24 +1,37 @@
 /**
- * Title of Project
- * Author Name
+ * Creating variables
+ * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * 
+ * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creates a 480x480 canvas
 */
 function setup() {
-
+// Create the canvas
+    createCanvas(480, 480);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws cheese
 */
 function draw() {
-
+    // Cheese color (yellow)
+    background(255, 255, 0);
+    
+    // Draw a hole in the upper left
+    push();
+    noStroke();
+    fill(0);
+    // Drawing a circle (works the same as circle())
+    ellipse(140, 175, 180);
+    pop();
 }
