@@ -46,6 +46,10 @@ function draw() {
     // Change the color of UFO
     ufo.fill = ufo.fill * 0.999;
 
+    // UFO's dimensions become smaller over time
+    ufo.width = ufo.width / 1.005;
+    ufo.height = ufo.height / 1.005;
+
     // Draw the UFO based on its properties
     push();
     fill(ufo.fill);
