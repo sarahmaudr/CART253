@@ -19,8 +19,15 @@ let bird = {
         x: 1,
         // The y is negative because we want the bird to go UP
         y: -2
+    },
+    //We now have acceleration properties, these will be ADDED to the
+    // velocity every frame
+    acceleration: {
+        x: 0.025,
+        // The y acceleration is negative so the bird will go UP
+        y: -0.05
     }
-};
+}
 
 /**
  * creating a canvas
@@ -36,7 +43,11 @@ function setup() {
 function draw() {
     background(0);
     
-    // Move the bird
+    // Change the bird's velocity by adding its acceleration to its velocity
+    bird.velocity.x = bird.velocity.x + bird.acceleration.x;
+    bird.velocity.y = bird.velocity.y + bird.acceleration.y;
+
+    // Move the bird by adding its velocity in x and y
     bird.x = bird.x + bird.velocity.x;
     bird.y = bird.y - bird.velocity.y;
     
