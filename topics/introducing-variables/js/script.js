@@ -24,11 +24,13 @@ function setup() {
  * Draws circles
 */
 function draw() {
+    background(0);
 //Draw a circle in the centre of the canvas
     push();
     noStroke();
     fill(255, 255, 0);
     // adding variables
-    ellipse(width/2, height/2, 100, 100);
+    // mouseX and mouseY to make our circle move !
+    ellipse(mouseX, mouseY, 100, 100);
     pop();
 }
