@@ -20,7 +20,7 @@ let ufo = {
 };
 
 // Shade to fill the sky (background)
-let skyShade = skyShade + 1;
+let skyShade = 0;
 
 /**
  * Creates the canvas
@@ -36,6 +36,9 @@ function draw() {
     // Display the sky
     background(skyShade);
 
+    // The UFO goes up
+    // We have lift-off!
+    ufo.y = ufo.y - 2;
     // Draw the UFO based on its properties
     push();
     fill(ufo.fill);
