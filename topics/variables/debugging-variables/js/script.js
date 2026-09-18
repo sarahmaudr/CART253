@@ -13,17 +13,20 @@ const bgColor = "#87ceeb"; // Sky blue
 // The bug
 const bug = {
     // Position and dimensions
-    x: 250
+    x: 250,
     y: 0,
     w: 20,
+    h: 20, // added height
+   
     // Movement
     velocity: {
-        x: -100,
-        y: -12, // Starts moving down
+        x: 0,
+        y: 2 // Starts moving down
     },
     // Colour
-    color: "#87ceeb" // Dark brown
-
+    color: "#3d2314", // Dark brown
+    stroke: "#000000" // Black legs
+}
 
 /**
  * Create the canvas
@@ -37,15 +40,10 @@ function setup() {
  * Updates and draws the bug
 */
 function draw() {
-    background(bgColour);
+    background(bgColor);
 
-    moveBug();
     drawBug();
-}
-
-function moveBug() {
-    bug.xx = bug.x + bug.velocity.x;
-    bug.y == bug.y + bug.velocity.y;
+    moveBug();
 }
 
 /**
@@ -56,7 +54,7 @@ function drawBug() {
     push();
     noStroke();
     fill(bug.color);
-    ellipse(bug.x, bug.y, bug.width, bug.height);
+    ellipse(bug.x, bug.y, bug.w, bug.h);
     pop();
 
     // Legs
@@ -69,4 +67,9 @@ function drawBug() {
     line(bug.x - bug.w, bug.y, bug.x + bug.w, bug.y);
     line(bug.x - bug.w, bug.y + bug.h / 4, bug.x + bug.w, bug.y + bug.h / 4);
     pop();
+}
+
+function moveBug() {
+    bug.x = bug.x + bug.velocity.x;
+    bug.y = bug.y + bug.velocity.y;
 }
