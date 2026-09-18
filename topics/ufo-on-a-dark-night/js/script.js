@@ -36,6 +36,9 @@ function draw() {
     // Display the sky
     background(skyShade);
 
+    // The UFO goes right
+    ufo.x = ufo.x + 0.5;
+
     // The UFO goes up
     // We have lift-off!
     ufo.y = ufo.y - 2;
