@@ -1,24 +1,33 @@
 /**
- * Title of Project
- * Author Name
+ * Variables
+ * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Learning about variables, playing with different settings and drawing circles.
+ * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creates a 640x640 canvas 
 */
 function setup() {
-
+// create the canvas
+    createCanvas(640, 640);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws circles
 */
 function draw() {
-
+//Draw a circle in the centre of the canvas
+    push();
+    noStroke();
+    fill(255, 255, 0);
+    ellipse(320, 320, 100, 100);
+    pop();
 }
