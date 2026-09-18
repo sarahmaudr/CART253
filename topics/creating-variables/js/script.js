@@ -11,30 +11,30 @@
 
 "use strict";
 
-// declare variable 'holeSize' so that we can use it later in our code
-let holeSize = 180;
+// Our cheese colour broken into RGB
+let cheeseRed = 255;
+let cheeseGreen = 255;
+let cheeseBlue = 0;
 
-/**
- * Creates a 480x480 canvas
-*/
+// Our cheese hole
+let holeShade = 0; // Greyscale value for the hole
+let holeX = 140; // x-coordinate of the hole
+let holeY = 175; // y-coordinate of the hole
+let holeSize = 180; // Diameter of the hole
+
 function setup() {
-// Create the canvas
+    // Create the canvas
     createCanvas(480, 480);
 }
 
-
-/**
- * Draws cheese
-*/
 function draw() {
-    // Cheese color (yellow)
-    background(255, 255, 0);
+    // Cheese colour (yellow)
+    background(cheeseRed, cheeseGreen, cheeseBlue);
     
     // Draw a hole in the upper left
     push();
     noStroke();
-    fill(0);
-    // Drawing a circle (works the same as circle())
-    ellipse(140, 175, holeSize);
+    fill(holeShade);
+    ellipse(holeX, holeY, holeSize);
     pop();
 }
