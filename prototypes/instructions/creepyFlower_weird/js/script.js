@@ -30,11 +30,12 @@ function draw() {
     drawPetals();
     drawHead();
     drawEyes();
+    drawMouth();
+    drawTeeth();
 }
 
 function drawBackground(){
     //draw the background of my masterpiece.
-    colorMode(RGB, 600);
     background(0, 0, 0);
 }
 
@@ -71,6 +72,7 @@ function drawHead() {
 function drawEyes(){
     //draw weird eyes
     push();
+    colorMode(RGB, 600);
     fill(mouseY, 0, 0);
     ellipse(275, 250, 25, 50);
     ellipse(325, 250, 25, 50);
@@ -81,5 +83,23 @@ function drawEyes(){
     fill(0, 0, 0);
     circle(275, 250, 10);
     circle(325, 250, 10);
+    pop();
+}
+
+function drawMouth(){
+    // draw a weird mouth
+    push();
+    fill(255, 0, 255)
+    rect(265, 300, 70, 20);
+    pop();
+}
+
+function drawTeeth(){
+    // draw surprising teeth !
+    push();
+    noStroke();
+    fill(255, mouseY, 255);
+    triangle(275, 301, 285, 301, 278, 320);
+    triangle(325, 301, 314, 301, 320, 320);
     pop();
 }
