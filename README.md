@@ -7,7 +7,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 
 ## Useful links
 * [Reflective Journal](journal.md)
-* [Instructions assignment Journal Entry] (https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-19)
+* [Instructions assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-19)
 
 ## Prototypes
 ### Pototyping: Instructions assignment
