@@ -13,3 +13,16 @@ I hope the future audience for my work will think my website is well-organized a
 
 ![Website Preview](images/Screenshot%202026-09-11.png)
 
+## 2026-09-19
+
+Working on these three prototypes was a really cool way to explore different design concepts. I ended up making a dragonfly for my representative piece, a geometric 'mirror' design for my abstract one and a transforming flower for the weird concept. It was a great way to see how interactive elements can completely change a project. 
+
+What surprised me the most was how much 'mouvement' you can get out of simple geometry. For my abstract prototype, I drew multiple triangles that all meet in the center of the page. I coded each triangle to change to a different color as the mouse moves, which ended up creating some kind of 'mirror effect' that looks like it's reflecting lights.
+
+The coolest part of this project was working on the weird prototype. I started with a normal flower, but as you move the cursor down the page, its eyes turn red and vampire teeth appear. It was really fun to play with the element of surprise.
+
+The main challenge was the math behind the abstract piece and making sure all the triangle were alligned.
+
+I hope people who look at my prototypes enjoy enteracting with them and find the transitions unexpected. As I move forward, I would love to develop the abstract mirror prototype further, maybe by turning it 3D.
+
+![Website Preview](images/Mirrors.png)
