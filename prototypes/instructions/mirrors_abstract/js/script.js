@@ -28,8 +28,12 @@ function draw() {
     drawMirrors();
 }
 
+/**
+ * Drawing triangles that change color with the movement of the mouse of the user (the 'mirrors')
+ * The positions of 'mouseX' and 'mouseY' change for every triangle so the colors are always different.
+*/
 function drawMirrors() {
-    // draw triangles that change color with the movement of the mouse of the user.
+    // the triangles.
     background(0);
     push();
     noStroke();

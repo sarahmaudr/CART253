@@ -12,9 +12,10 @@
 "use strict";
 
 /**
- * creating a canvas
+ * creating a 800x800 canvas
 */
 function setup() {
+    // the canvas
     createCanvas(800,800);
 }
 
@@ -29,13 +30,19 @@ function draw() {
     drawBody();
 }
 
+/**
+ * drawing the background a solid color
+*/
 function drawBackground(){
-// drawing the background a solid color
+// the background
     background("green");
 }
 
+/**
+ * drawing the wings for the dragonfly
+*/
 function drawWings(){
-// drawing the wings for the dragonfly
+// the wings
     push();
     fill("lightGrey");
     ellipse(300, 350, 200, 75);
@@ -45,16 +52,22 @@ function drawWings(){
     pop();
 }
 
+/**
+ * drawing the head for of the dragonfly
+*/
 function drawingHead(){
-// drawing the head for of the dragonfly
+// the head
     push();
     fill("black");
     circle(400, 280, 45);
     pop();
 }
 
+/**
+ * drawing the body of the dragonfly
+*/
 function drawBody(){
-// drawing the body of the dragonfly
+// the body 
     push();
     fill("black");
     ellipse(400, 380, 30, 200);

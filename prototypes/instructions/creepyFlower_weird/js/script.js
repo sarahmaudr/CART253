@@ -12,10 +12,10 @@
 "use strict";
 
 /**
- * Creating a canvas
+ * Creating a 600x600 canvas
 */
 function setup() {
-    //create a 600x600 canvas
+    //create the canvas
     createCanvas(600, 600);
 }
 
@@ -33,21 +33,30 @@ function draw() {
     drawTeeth();
 }
 
+/**
+ * drawing the background of my masterpiece.
+*/
 function drawBackground(){
-    //draw the background of my masterpiece.
+    // the background
     background(0, 0, 0);
 }
 
+/**
+ * drawing the stem of the flower
+*/
 function drawStem(){
-    // draw stem of the flower
+    // the stem
     push();
     fill("green");
     rect(290, 390, 20, 400);
     pop();
 }
 
+/**
+ * drawing petals of the flower
+*/
 function drawPetals(){
-    // draw petals of the flower
+    // the petals
     push();
     noStroke();
     fill("white");
@@ -59,8 +68,11 @@ function drawPetals(){
     pop();
 }
 
+/**
+ * drawing middle part of the flower
+*/
 function drawHead() {
-    // draw middle of the flower
+    // the middle part
     push();
     noStroke();
     fill("yellow");
@@ -68,8 +80,11 @@ function drawHead() {
     pop();
 }
 
+/**
+ * drawing the eyes of the flower
+*/
 function drawEyes(){
-    //draw weird eyes
+    // the weird eyes
     push();
     colorMode(RGB, 600);
     fill(mouseY, 0, 0);
@@ -77,7 +92,7 @@ function drawEyes(){
     ellipse(325, 250, 25, 50);
     pop();
 
-    //draw pupils 
+    // the pupils 
     push();
     fill(0, 0, 0);
     circle(275, 250, 10);
@@ -85,16 +100,22 @@ function drawEyes(){
     pop();
 }
 
+/**
+ * drawing a weird mouth of the flower
+*/
 function drawMouth(){
-    // draw a weird mouth
+    // the mouth
     push();
     fill(255, 0, 255)
     rect(265, 300, 70, 20);
     pop();
 }
 
+/**
+ * drawing surprising teeth !
+*/
 function drawTeeth(){
-    // draw surprising teeth !
+    // the teeth
     push();
     noStroke();
     fill(255, mouseY, 255);
