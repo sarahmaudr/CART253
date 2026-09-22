@@ -30,6 +30,11 @@ let brush4 = {
   y: 335,
   size: 5,
 }
+let brush5 = {
+  x: 500,
+  y: 335,
+  size: 5,
+}
 
 /**
  * Creating a 1000x640 canvas and a background
@@ -90,6 +95,12 @@ function updateBrush() {
 
   brush3.x += random(-3, 3);
   brush3.y += random(-2, -0,1);
+
+  brush4.x += random(-3, 3);
+  brush4.y += random(-2, -0,1);
+
+  brush5.x += random(-3, 3);
+  brush5.y += random(-2, -0,1);
   
   // Update brush size randomly
   brush.size += random(-1, 1.5);
@@ -113,5 +124,17 @@ function drawBrush() {
   noStroke();
   fill("white");
   ellipse(brush3.x, brush3.y, brush.size);
+  pop();
+
+  push();
+  noStroke();
+  fill("brown");
+  ellipse(brush4.x, brush4.y, brush.size);
+  pop();
+
+  push();
+  noStroke();
+  fill("lightBlue");
+  ellipse(brush5.x, brush5.y, brush.size);
   pop();
 }
