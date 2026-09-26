@@ -75,7 +75,7 @@ function drawEyes() {
 }
 
 /**
- * draws teeth that appears with the eyes of our creatures
+ * draws teeth that appears with the eyes of our creatures.
  */
 function drawTeeth() {
     // the teeth
