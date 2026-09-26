@@ -1,13 +1,17 @@
 /**
  * Celebration !
- * Author Name
+ * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * A dynamic artwork with confettis falling for a celebration.
+ * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";
 
+// settings of the confettis
 let confetti1 = {x: 100, y: 0, velocity: { x: 0, y: 0 }, fill: "red"};
 let confetti2 = {x: 200, y: 0, velocity: { x: 0, y: 0 }, fill: "green"};
 let confetti3 ={x: 300, y: 0, velocity: { x: 0, y: 0 }, fill: "blue"};
@@ -18,7 +22,7 @@ let confetti7 ={x: 700, y: 0, velocity: { x: 0, y: 0 }, fill: "purple"};
 let confetti8 ={x: 800, y: 0, velocity: { x: 0, y: 0 }, fill: "white"};
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * creates a canvas
 */
 function setup() {
     // a 1000x600 canvas
@@ -27,15 +31,18 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * draws a blue background and creates functions to draw the confettis
 */
 function draw() {
-    // the black background
+    // the blue background
     background("lightBlue");
     updateConfetti();
     drawConfetti();
 }
 
+/**
+ * sets the movement of each confetti
+ */
 function updateConfetti() {
     confetti1.velocity.y += 0.01;
     confetti1.x += random(-3, 3);
@@ -70,6 +77,9 @@ function updateConfetti() {
     confetti8.y += confetti8.velocity.y;
 }
 
+/**
+ * draws all the confettis
+ */
 function drawConfetti() {
     push();
     noStroke();
