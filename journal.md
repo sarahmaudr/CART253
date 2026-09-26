@@ -28,6 +28,11 @@ I hope people who look at my prototypes enjoy enteracting with them and find the
 ![Website Preview](images/Mirrors.png)
 
 ## 2026-09-26
+With the 3 prototypes, I explored visual motion and user interactivity.
+What surprised me most in my 'My head is on fire' project was using 'random()' creates unpredictable (or almost) results. It makes the fire in my project look more real, because fire is unpredictable. In contrast, in my 'nightmare' project, 'mouseX' and 'colorMode(RGB, 1000)' are controlled and give the expected result.
 
+The coolest discovery was seeing how canvas works. Leaving background("black") in setup() allowed the flame and smoke shapes to accumulate over time, building up a dense texture on top of the character's head. In contrast, for the 'celebration' project, the 'background()' needed to be inside 'draw()' to avoid streaks. The hardest part for me was to figure that out!
 
-![Website Preview](images/MyHeadIsOnFire.png)
+I hope anyone viewing my work experience both humor and suspense throughout my different pieces. Moving forward, I would love to find a way to, for example, make the faces in 'nightmare' appear with a click of the mouse instead of its movement, and make the confetti fall more naturally.
+
+![Website Preview](images/Celebration.png)

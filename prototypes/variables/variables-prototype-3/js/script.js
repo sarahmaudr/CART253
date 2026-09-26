@@ -2,7 +2,7 @@
  * Celebration !
  * Sarah-Maude Roy
  * 
- * A dynamic artwork with confettis falling for a celebration.
+ * A dynamic artwork with confetti falling for a celebration.
  * 
  * Uses:
  * p5.js
@@ -11,7 +11,7 @@
 
 "use strict";
 
-// settings of the confettis
+// settings of the confetti
 let confetti1 = {x: 100, y: 0, velocity: { x: 0, y: 0 }, fill: "red"};
 let confetti2 = {x: 200, y: 0, velocity: { x: 0, y: 0 }, fill: "green"};
 let confetti3 ={x: 300, y: 0, velocity: { x: 0, y: 0 }, fill: "blue"};
@@ -31,7 +31,7 @@ function setup() {
 
 
 /**
- * draws a blue background and creates functions to draw the confettis
+ * draws a blue background and creates functions to draw the confetti
 */
 function draw() {
     // the blue background
@@ -78,7 +78,7 @@ function updateConfetti() {
 }
 
 /**
- * draws all the confettis
+ * draws all the confetti
  */
 function drawConfetti() {
     push();
