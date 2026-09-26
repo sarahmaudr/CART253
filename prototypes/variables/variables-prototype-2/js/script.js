@@ -2,8 +2,7 @@
  * Nightmare
  * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * An artwork on nightmares, where creatures appear in your dreams. Be careful !
  * 
  * Uses:
  * p5.js
@@ -31,7 +30,7 @@ function draw() {
 }
 
 /**
- * 
+ * draws eyes of our creatures that appears from the dark
  */
 function drawEyes() {
     // the eyes
@@ -76,9 +75,10 @@ function drawEyes() {
 }
 
 /**
- * 
+ * draws teeth that appears with the eyes of our creatures
  */
 function drawTeeth() {
+    // the teeth
     push();
     colorMode(RGB, 1000);
     noStroke();
@@ -108,6 +108,5 @@ function drawTeeth() {
     triangle(110, 535, 120, 535, 115, 575);
     triangle(130, 535, 140, 535, 135, 575);
     triangle(150, 535, 160, 535, 155, 575);
-
     pop();
 }
