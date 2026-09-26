@@ -26,3 +26,8 @@ The main challenge was the math behind the abstract piece and making sure all th
 I hope people who look at my prototypes enjoy enteracting with them and find the transitions unexpected. As I move forward, I would love to develop the abstract mirror prototype further, maybe by turning it 3D.
 
 ![Website Preview](images/Mirrors.png)
+
+## 2026-09-26
+
+
+![Website Preview](images/MyHeadIsOnFire.png)

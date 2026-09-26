@@ -8,6 +8,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 ## Useful links
 * [Reflective Journal](journal.md)
 * [Instructions assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-19)
+* [Variables assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-26)
 
 ## Prototypes
 ### Pototyping: Instructions assignment
@@ -25,3 +26,19 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 ![Website Preview](images/creepyFlower.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/instructions/creepyFlower_weird/)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/instructions/creepyFlower_weird/js/script.js)
+
+### Prototyping : variables assignment
+#### MY HEAD IS ON FIRE !
+![Website Preview](images/MyHeadIsOnFire.png)
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/variables/variables-prototype-1/)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/variables/variables-prototype-1/js/script.js)
+
+#### Nightmare
+![Website Preview](images/Nightmare.png)
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/variables/variables-prototype-2/)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/variables/variables-prototype-2/js/script.js)
+
+#### Celebration !
+![Website Preview](images/Celebration.png)
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/variables/variables-prototype-3/)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/variables/variables-prototype-3/js/script.js)
