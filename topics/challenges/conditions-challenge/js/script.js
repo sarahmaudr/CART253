@@ -26,6 +26,13 @@ const user = {
   fill: "#000000"
 };
 
+const target = {
+  x: 50,
+  y: 350,
+  size: 100,
+  fill: "#59cce3"
+}
+
 /**
  * Create the canvas
  */
@@ -45,6 +52,8 @@ function draw() {
   // Draw the user and puck
   drawUser();
   drawPuck();
+  movePuck();
+  drawTarget();
 }
 
 /**
@@ -75,4 +84,29 @@ function drawPuck() {
   fill(puck.fill);
   ellipse(puck.x, puck.y, puck.size);
   pop();
+}
+
+function movePuck() {
+const d = dist(user.x, user.y, puck.x, puck.y);
+const overlap = (d < user.size/2 + puck.size/2);
+    if (overlap && puck.x > user.x) {
+        puck.x = puck.x + 1
+    }
+    else if (overlap && puck.x < user.x){
+        puck.x = puck.x - 1
+    }
+    if (overlap && puck.y < user.y){
+        puck.y = puck.y - 1
+    }
+    else if (overlap && puck.y > user.y){
+        puck.y = puck.y + 1
+    }
+}   
+
+function drawTarget(){
+    push();
+    noStroke();
+    fill(target.fill);
+    ellipse(target.x, target.y, target.size);
+    pop();
 }
