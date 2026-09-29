@@ -30,7 +30,11 @@ const target = {
   x: 50,
   y: 350,
   size: 100,
-  fill: "#59cce3"
+  fill: "#59cce3",
+  fills: {
+    noOverlap: "#59cce3", // blue for no overlap
+    overlap: "#00ff00" // green for overlap
+  }
 }
 
 /**
@@ -54,6 +58,7 @@ function draw() {
   drawPuck();
   movePuck();
   drawTarget();
+  checkTarget();
 }
 
 /**
@@ -90,16 +95,16 @@ function movePuck() {
 const d = dist(user.x, user.y, puck.x, puck.y);
 const overlap = (d < user.size/2 + puck.size/2);
     if (overlap && puck.x > user.x) {
-        puck.x = puck.x + 1
+        puck.x = puck.x + 2
     }
     else if (overlap && puck.x < user.x){
-        puck.x = puck.x - 1
+        puck.x = puck.x - 2
     }
     if (overlap && puck.y < user.y){
-        puck.y = puck.y - 1
+        puck.y = puck.y - 2
     }
     else if (overlap && puck.y > user.y){
-        puck.y = puck.y + 1
+        puck.y = puck.y + 2
     }
 }   
 
@@ -109,4 +114,15 @@ function drawTarget(){
     fill(target.fill);
     ellipse(target.x, target.y, target.size);
     pop();
+}
+
+function checkTarget(){
+const d = dist(puck.x, puck.y, target.x, target.y);
+const overlap = (d < puck.size/10 + target.size/10);
+    if (overlap) {
+        target.fill = target.fills.overlap;
+    }
+    else {
+        target.fill = target.fills.noOverlap;
+    }
 }
