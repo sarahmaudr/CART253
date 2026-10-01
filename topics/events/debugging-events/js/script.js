@@ -27,7 +27,7 @@ const bug = {
     speedUp: 1,
     // Colour
     color: "#aa4411" // Dark brown
-};
+}
 
 // The game is 15 seconds long
 let gameDuration = 15;
@@ -41,10 +41,10 @@ function setup() {
     createCanvas(500, 500);
 
     // Listen for keyboard presses for the controls
-    document.addEventListener("keypress", controlsHandler);
+    document.addEventListener("keydown", controlsHandler);
 
     // End the game after its duration
-    setTime(endTheGame, gameDuration);
+    setTimeout(endGame, gameDuration * 1000);
 }
 
 /**
@@ -99,7 +99,7 @@ function drawBug() {
  * Sets the game to be over
  */
 function endGame() {
-    gameOver === true;
+    gameOver = true;
 }
 
 /**
@@ -109,7 +109,7 @@ function drawGameOver() {
     drawBug();
 
     push();
-    textSize(64);
+    textSize(32);
     textAlign(CENTER, CENTER);
     textStyle(BOLD);
     text("GAME OVER", width / 2, height / 2);
@@ -119,17 +119,17 @@ function drawGameOver() {
 /**
  * Arrow keys increase bug velocity in that direction (infinitely)
  */
-function controlsHandler() {
-    if (event.keyCode === LEFT_ARROW) {
+function controlsHandler(event) {
+    if (event.key === "ArrowLeft") {
         bug.velocity.x += -bug.speedUp;
     }
-    else if (event.keyCode === RIGHT_ARROW) {
+    else if (event.key === "ArrowRight") {
         bug.velocity.x += bug.speedUp;
     }
-    else if (event.keyCode === UP_ARROW) {
+    else if (event.key === "ArrowUp") {
         bug.velocity.y += -bug.speedUp;
     }
-    else if (event.keyCode === DOWN_ARROW) {
+    else if (event.key === "ArrowDown") {
         bug.velocity.y += bug.speedUp;
     }
 }
@@ -137,7 +137,7 @@ function controlsHandler() {
 /**
  * If the bug gets clicked it dies
  */
-function mouseIsPressed() {
+function mousePressed() {
     // Don't check clicks when the game is over
     if (gameOver) {
         return;
