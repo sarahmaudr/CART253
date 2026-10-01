@@ -1,5 +1,5 @@
 /**
- * Title of Project
+ * Time and JavaScript and p5
  * Author Name
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
