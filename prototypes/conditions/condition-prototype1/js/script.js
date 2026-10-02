@@ -67,7 +67,7 @@ function draw() {
         text("BOO !", 400, 300);
     }
 
-    else if (d < 250) {
+    else if (d > 250) {
         push();
         fill(255, 200, 220);
         noStroke();
