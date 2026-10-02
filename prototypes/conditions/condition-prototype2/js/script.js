@@ -56,31 +56,23 @@ function draw() {
         strokeWeight(4);
 
         // left eye
-        line(
-            plantX + offsetX - 25,
-            plantY - 35,
-            plantX + offsetX - 15, 
-            plantY - 25
-        );
-        line(
-            plantX + offsetX - 15,
-            plantY - 35,
-            plantX + offsetX - 25, 
-            plantY - 25
-        );
+        line(plantX + offsetX - 25, plantY - 35, plantX + offsetX - 15, plantY - 25);
+        line(plantX + offsetX - 15, plantY - 35, plantX + offsetX - 25, plantY - 25);
 
         // right eye
-        line(
-            plantX + offsetX + 15,
-            plantY - 35,
-            plantX + offsetX + 25, 
-            plantY - 25
-        );
-        line(
-            plantX + offsetX + 25,
-            plantY - 35,
-            plantX + offsetX + 15, 
-            plantY - 25
-        );
+        line(plantX + offsetX + 15, plantY - 35, plantX + offsetX + 25, plantY - 25);
+        line(plantX + offsetX + 25, plantY - 35, plantX + offsetX + 15, plantY - 25);
+
+        // close mouth
+        noFill();
+        stroke(80, 0, 0);
+        line(plantX + offsetX - 20, plantY - 5, plantX + offsetX + 20, plantY - 5);
+
+        // text
+        fill(150, 0 ,0);
+        noStroke();
+        textSize(24);
+        textAlign(CENTER);
+        text("no thanks.", plantX, plantY - 100);
     }
 }
