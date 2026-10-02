@@ -1,24 +1,30 @@
 /**
- * Title of Project
- * Author Name
+ * The Shy Ghost
+ * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * 
+ * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";
 
+let ghostX = width/2;
+let ghostY = height/2;
+
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * 
 */
 function setup() {
-
+    createCanvas(800, 600);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * 
 */
 function draw() {
-
+    background(30, 30, 55);
 }
