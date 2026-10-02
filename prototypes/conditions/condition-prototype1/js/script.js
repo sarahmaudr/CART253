@@ -2,7 +2,7 @@
  * The Shy Ghost
  * Sarah-Maude Roy
  * 
- * An interactive prototype where a ghost reacts to mouse proximity by appearing when it gets close. 
+ * An interactive prototype where a ghost reacts to mouse proximity by disapearing when it gets close. 
  * It also reacts when the mouse is pressed by scarying you.
  * 
  * Uses:
@@ -27,7 +27,7 @@ function setup() {
 
 
 /**
- * draws a shy ghost when the mouse gets close to it, on a dark background, and scares you when you press the mouse
+ * draws a shy ghost. When the mouse gets close to it, it disapears on a dark background, and scares you when you press the mouse.
 */
 function draw() {
     // darck background
@@ -60,14 +60,15 @@ function draw() {
         pop();
 
         // text : BOO !
-        fill(255, 200, 0);
+        fill(255, 150, 0);
         textSize(96);
         textStyle(BOLD);
         textAlign(CENTER, CENTER);
         text("BOO !", 400, 300);
     }
 
-    else if (d > 250) {
+    // second condition: a shy ghost is on the screen, but when you try to catch it (when the mouse is to close), it disappears.
+    else if (d > 300) {
         push();
         fill(255, 200, 220);
         noStroke();
@@ -75,7 +76,7 @@ function draw() {
         rect(ghostX - 113, ghostY, 226, 120, 0, 0, 35, 35);
         pop();
 
-        // eyes
+        // the eyes
         push();
         fill(0);
         noStroke();
@@ -90,7 +91,7 @@ function draw() {
         ellipse(ghostX + 20, ghostY - 40, 15, 15);
         pop();
 
-        // red cheeks
+        // the red cheeks
         push();
         fill(255, 100, 150);
         ellipse(ghostX - 50, ghostY - 10, 40, 20);
