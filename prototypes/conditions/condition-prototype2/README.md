@@ -1,4 +1,4 @@
-# The Curious Plant
+# The Disgusted Plant
 
 Sarah-Maude Roy
 
