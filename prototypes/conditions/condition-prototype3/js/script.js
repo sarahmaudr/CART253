@@ -11,12 +11,22 @@
 
 "use strict";
 
+const moon = {
+  x: 500,
+  y: 200,
+  size: 100,
+  fill: "#f7f7f7", // red to start
+};
 
 const sun = {
   x: undefined, // will be mouseX
   y: undefined, // will be mouseY
   size: 75,
-  fill: "#e9d818"
+  fill: "#e9d818",
+  fills: {
+    noOverlap: "#e9d818", // red for no overlap
+    overlap: "#0b0b0b" // green for overlap
+  }
 }
 
 /**
@@ -38,6 +48,13 @@ function draw() {
     sun.x = mouseX;
     sun.y = mouseY;
 
+    // the moon
+    push();
+    noStroke();
+    fill(moon.fill);
+    ellipse(moon.x, moon.y, moon.size);
+    pop();
+
     // the sun
     push();
     noStroke();
@@ -57,6 +74,5 @@ function draw() {
     fill("darkGreen");
     ellipse(800, 700, 1000, 500);
     pop();
-
 
 }
