@@ -1,7 +1,9 @@
 /**
- * The Curious Plant
+ * The Disgusted Plant
  * Sarah-Maude Roy
  * 
+ * An interactive prototype with state changes using conditionals
+ * The plant turns away in disgust when clicked.
  * 
  * Uses:
  * p5.js
@@ -25,7 +27,7 @@ function setup() {
 
 
 /**
- * Creates a moving plants that reacts to the mouse movement and click (on a green background).
+ * Creates a moving plants that reacts to the mouse click on a green background.
 */
 function draw() {
     background("lightGreen");
@@ -33,9 +35,11 @@ function draw() {
     let offsetX = 0;
 
     // the stem
+    push();
     stroke("green");
     strokeWeight(12);
     line(plantX, plantY, plantX, height);
+    pop();
 
     // fist condition: when the mouse is pressed, the plant's head moves away
     if (mouseIsPressed) {
@@ -83,7 +87,7 @@ function draw() {
         text("no thanks.", plantX, plantY - 100);
         pop();
     }
-    // second condition: when mouse not pressed, the plant follows the mouse with its eyes
+    // second condition: when the mouse is not pressed, the plant looks like it wants to eat it.
     else {
         // the head
         push();
@@ -98,5 +102,26 @@ function draw() {
         noStroke();
         ellipse(plantX, plantY - 10, 90, 70);
         pop();
+
+        // teeth
+        push();
+        fill(255);
+        noStroke();
+        triangle(plantX - 30, plantY - 40, plantX - 15, plantY - 40, plantX - 22, plantY - 25);
+        triangle(plantX + 15, plantY - 40, plantX + 30, plantY - 40, plantX + 22, plantY - 25);
+        pop();
+
+        // eyes
+        push();
+        fill(255);
+        noStroke();
+        ellipse(plantX - 25, plantY - 60, 24, 24);
+        ellipse(plantX + 25, plantY - 60, 24, 24);
+        pop();
+
+        push();
+        fill(0);
+        ellipse(plantX - 25, plantY - 60, 10, 10);
+        ellipse(plantX + 25, plantY - 60, 10, 10);
     }
 }
