@@ -9,6 +9,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 * [Reflective Journal](journal.md)
 * [Instructions assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-19)
 * [Variables assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-26)
+* [Conditionals assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-04)
 
 ## Prototypes
 ### Pototyping: Instructions assignment
@@ -45,16 +46,16 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 
 ### Prototyping : conditionals assignment
 #### The Shy Ghost
-![Website Preview]()
+![Website Preview](images/ghost.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/conditions/condition-prototype1/)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/conditions/condition-prototype1/js/script.js)
 
 #### The disgusted Plant
-![Website Preview]()
+![Website Preview](images/plant.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/conditions/condition-prototype2/)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/conditions/condition-prototype2/js/script.js)
 
 #### The eclipse
-![Website Preview]()
+![Website Preview](images/eclipse.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/conditions/condition-prototype3/)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/conditions/condition-prototype3/js/script.js)

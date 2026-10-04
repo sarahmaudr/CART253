@@ -40,4 +40,4 @@ I hope anyone viewing my work experience both humor and suspense throughout my d
 ## 2026-10-04
 
 
-![Website Preview](images/Celebration.png)
+![Website Preview]()
