@@ -38,6 +38,11 @@ I hope anyone viewing my work experience both humor and suspense throughout my d
 ![Website Preview](images/Celebration.png)
 
 ## 2026-10-04
+I made three interactive prototypes for this assignment using conditional logic. Across all three, my goal was to bring static images 'to life'. In 'Shy Ghost', I used 'mouseIsPressed' for direct state changes. In 'Disgusted Plant', I added dynamic offsets (offsetX) so the plant could turn away in disgust. Finally, in 'The Eclipse', I used the distance between the moving sun and fixed moon to trigger a full day-to-night environment shift. 
+What surprised me the most is how many changes and personality could appear from simple conditional statements. 
 
+The trickiest part of the process for me was the logic of the background in 'the eclipse'. I was trying to make it change when the two circles overlapped by treating 'background' as a variable. It would not work, so I had to create the variable 'skyFill'. 
 
-![Website Preview]()
+I hope viewers feel a sense of discovery when interacting with these pieces. If I were to develop this work further, I would love to merge some of the mechanics into one scene where the disgusted plant could live through an eclipse.
+
+![Website Preview](images/eclipse.png)
