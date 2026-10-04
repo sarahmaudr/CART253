@@ -42,3 +42,19 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 ![Website Preview](images/Celebration.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/variables/variables-prototype-3/)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/variables/variables-prototype-3/js/script.js)
+
+### Prototyping : conditionals assignment
+#### The Shy Ghost
+![Website Preview]()
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/conditions/condition-prototype1/)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/conditions/condition-prototype1/js/script.js)
+
+#### The disgusted Plant
+![Website Preview]()
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/conditions/condition-prototype2/)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/conditions/condition-prototype2/js/script.js)
+
+#### The eclipse
+![Website Preview]()
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/conditions/condition-prototype3/)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/conditions/condition-prototype3/js/script.js)

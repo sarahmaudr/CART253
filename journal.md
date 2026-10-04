@@ -36,3 +36,8 @@ The coolest discovery was seeing how canvas works. Leaving background("black") i
 I hope anyone viewing my work experience both humor and suspense throughout my different pieces. Moving forward, I would love to find a way to, for example, make the faces in 'nightmare' appear with a click of the mouse instead of its movement, and make the confetti fall more naturally.
 
 ![Website Preview](images/Celebration.png)
+
+## 2026-10-04
+
+
+![Website Preview](images/Celebration.png)
