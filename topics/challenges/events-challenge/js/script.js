@@ -26,7 +26,7 @@ function setup() {
  * Update the score and display the UI
  */
 function draw() {
-  background("#87ceeb");
+  background("#1ff575");
   
   // Only increase the score if the game is not over
   if (!gameOver) {
@@ -65,7 +65,7 @@ function displayScore() {
 }
 
 function lose() {
-    if (keyIsPressed){
+    if (keyIsPressed || mouseIsPressed){
         gameOver = true;
     }
 }
