@@ -34,6 +34,7 @@ function draw() {
     score += 0.05;
   }
   displayUI();
+  lose();
 }
 
 /**
@@ -61,4 +62,10 @@ function displayScore() {
   textAlign(CENTER, CENTER);
   text(floor(score), width/2, height/2);
   pop();
+}
+
+function lose() {
+    if (keyIsPressed){
+        gameOver = true;
+    }
 }
