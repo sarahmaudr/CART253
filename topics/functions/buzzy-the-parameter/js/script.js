@@ -27,15 +27,23 @@ function setup() {
  */
 function draw() {
     background("#87ceeb");
+    
+    moveFly(buzzyTheFly);
 
-    // Move buzzy
-    buzzyTheFly.x += random(-buzzyTheFly.buzziness, buzzyTheFly.buzziness);
-    buzzyTheFly.y += random(-buzzyTheFly.buzziness, buzzyTheFly.buzziness);
+    drawFly(buzzyTheFly);
+}
 
+
+function moveFly(fly){
+    fly.x += random(-fly.buzziness, fly.buzziness);
+    fly.y += random(-fly.buzziness, fly.buzziness);
+}
+    
+function drawFly(fly){
     // Draw buzzy
     push();
     noStroke();
     fill(0);
-    ellipse(buzzyTheFly.x, buzzyTheFly.y, buzzyTheFly.size);
+    ellipse(fly.x, fly.y, fly.size);
     pop();
 }
