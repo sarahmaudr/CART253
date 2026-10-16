@@ -49,13 +49,15 @@ function setup() {
  * Creates and returns a new food object
  */
 function createFood() {
+    const size = random(10, 20);
     // Create an object with food properties
     const newFood = {
-        x: random(0, width),
-        y: random(0, height),
-        size: random(10, 20),
+        x: random(size/2, width - size/2),
+        y: random(size/2, height - size/2),
+        size: size,
         fill: "#ceeb87"
     };
+    return newFood;
 }
 
 /**
@@ -76,9 +78,9 @@ function draw() {
  * Moves the bug toward its destination
  * (Unless it's already there)
  */
-function moveBug() {
+function moveBug(bug) {
     // First check if the bug overlaps the destination area
-    if (!overlap(bug)) {
+    if (!overlap(bug, bug.destination)) {
         // If not, find out how far away it is on x and y
         const dx = bug.x - bug.destination.x;
         const dy = bug.y - bug.destination.y;
@@ -100,13 +102,14 @@ function moveBug() {
             bug.y += -bug.speed;
         }
     }
+}
 
 
     /**
      * All elements in the world are circles with x, y, size and fill
      * So draw the provided one according to those properties
      */
-    function drawElement() {
+    function drawElement(element) {
         push();
         noStroke();
         fill(element.fill);
@@ -134,7 +137,7 @@ function moveBug() {
             return true;
         }
         else {
-            return true;
+            return false;
         }
     }
 
