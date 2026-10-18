@@ -13,7 +13,6 @@
 
 let lastMoveTime = 0;
 
-
 /**
  * 
 */
@@ -27,13 +26,21 @@ function setup() {
 */
 function draw() {
     let waitTime = millis() - lastMoveTime;
+    let message = "";
 
     background(40, 20, 10);
+
+    if (waitTime < 5000) {
+        message = "Hmm...";
+    }
+    else {
+        message = "GRYFFINDOR !"
+    }
 
     textAlign(CENTER, CENTER);
     textSize(64);
     textFont("Papyrus");
     fill(230, 200, 120);
 
-    text("Hmm...", width / 2, height / 2);
+    text(message, width / 2, height / 2);   
 }
