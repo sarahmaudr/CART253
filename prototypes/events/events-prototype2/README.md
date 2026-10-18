@@ -6,7 +6,7 @@ Sarah-Maude Roy
 
 ## Description
 
-
+Practice your Harry Potter Spells !!! Write the spell you see on the screen, until you know them by heart like a real wizard !
 
 ## Attribution
 
