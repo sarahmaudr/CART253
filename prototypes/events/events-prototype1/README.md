@@ -6,7 +6,7 @@ Sarah-Maude Roy
 
 ## Description
 
-Click on the screen to shine a light on hidden items.
+Click on the screen to shine a light on hidden items by casting a spell.
 
 ## Attribution
 
