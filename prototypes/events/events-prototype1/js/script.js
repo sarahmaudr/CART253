@@ -15,18 +15,20 @@
 let lumosActivate = false;
 
 let snitch = {
-    x: 900,
-    y: 300,
+    x: 0,
+    y: 0,
     size: 35
 };
 
-let lightRadius = 250;
+let lightRadius = 350;
 
 /**
  * creates the size of the canvas, in this case it is 1500x800.
 */
 function setup() {
     createCanvas(1500, 800);
+    snitch.x = random(100,900);
+    snitch.y = random(100,700);
 }
 
 
