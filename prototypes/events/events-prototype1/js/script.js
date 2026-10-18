@@ -33,7 +33,7 @@ function setup() {
 
 
 /**
- * 
+ * Makes a goden snitch appear when the mouse is pressed AND when the mouse is near it.
 */
 function draw() {
     // black background
@@ -70,7 +70,7 @@ function draw() {
 }
 
 /**
- * 
+ * Changes the state of 'lumosActivate' evertime the mouse is pressed.
  */
 function mousePressed(){
     lumosActivate = !lumosActivate;
