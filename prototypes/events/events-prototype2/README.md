@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Casting Spells
 
 Sarah-Maude Roy
 
