@@ -17,10 +17,10 @@ let lumosActivate = false;
 let snitch = {
     x: 900,
     y: 300,
-    size: 20
+    size: 35
 };
 
-let lightRadius = 100;
+let lightRadius = 250;
 
 /**
  * 
@@ -36,14 +36,22 @@ function setup() {
 function draw() {
     background(0);
 
-let distance = dist(mouseX, mouseY, snitch.x, snitch.y);
+    let d = dist(mouseX, mouseY, snitch.x, snitch.y);
 
     if (lumosActivate){
         push();
         fill("white");
         noStroke();
-        circle(mouseX,mouseY,400);
+        circle(mouseX,mouseY,lightRadius);
         pop();
+
+        if (d < lightRadius/3){
+            push();
+            //fill the snitch yellow, the last number is transparency.
+            fill(200, 200, 100);
+            circle(snitch.x, snitch.y, snitch.size);
+            pop();
+        }
     }
 }
 
