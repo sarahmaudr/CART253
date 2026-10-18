@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Sorting Hat
 
 Sarah-Maude Roy
 

@@ -1,5 +1,5 @@
 /**
- * Title of Project
+ * Sorting Hat
  * Sarah-Maude Roy
  * 
  * 
@@ -10,6 +10,9 @@
  */
 
 "use strict";
+
+let lastMoveTime = 0;
+
 
 /**
  * 
@@ -23,5 +26,14 @@ function setup() {
  * 
 */
 function draw() {
+    let waitTime = millis() - lastMoveTime;
 
+    background(40, 20, 10);
+
+    textAlign(CENTER, CENTER);
+    textSize(64);
+    textFont("Papyrus");
+    fill(230, 200, 120);
+
+    text("Hmm...", width / 2, height / 2);
 }
