@@ -17,8 +17,14 @@ let spells = ["accio", "lumos", "expelliarmus"];
 // verify the current spell on the screen
 let currentSpell = "";
 
-//verify the text typed by the user
+// verify the text typed by the user
 let typedText = "";
+
+// verify whether the last key pressed was wrong
+let wrongKey = false;
+
+// verify whether the player has finished typing the spell
+let spellCast = false;
 
 /**
  * creates a 1000x700 canvas a and selects random spells.
@@ -33,30 +39,68 @@ function setup() {
  * creates the background of the canvas, and the text (color, size, position...)
 */
 function draw() {
-    // black background
-    background(0);
+    // red background when the player makes a mistake, black otherwise
+    if (wrongKey) {
+        background(120, 0, 0);
+    }
+    else if (spellCast) {
+        background(60, 20, 100);
+    }
+    else {
+        background(0);
+    }
     // text parameters
     textAlign(CENTER, CENTER);
     textSize(64);
     fill("white");
+    textFont("Georgia");
+
     // text position
     text(currentSpell, width/2, height/2);
     text(typedText, width/2, height/2 + 100);
+
+    if (wrongKey) {
+        textSize(128);
+        text("💥", width/2, height/2 - 150);
+    }
+    else if (spellCast) {
+        textSize(128);
+        text("✨", width/2, height/2 - 150);
+    }
+
+    textSize(16);
+    text("Press ENTER for a new spell", width/2, height - 50);
 }
 
 /**
  * verify the text lenght and spelling to make sure the user casted the right spell !
 */
 function keyPressed() {
-    // is it the right lenght
+    // ENTER restarts with a new spell, whatever the situation
+    if (key === "Enter") {
+        currentSpell = random(spells);
+        typedText = "";
+        wrongKey = false;
+        spellCast = false;
+        return;
+    }
+
+    // once the spell is cast, ignore the other keys until ENTER
+    if (spellCast) {
+        return;
+    }
+
+    // is it the next expected letter?
     if (key === currentSpell[typedText.length]) {
+        wrongKey = false;
         typedText = typedText + key;
 
-        // is it the same letters
+        // all the letters are right: the spell is cast
         if (typedText === currentSpell) {
-            currentSpell = random(spells);
-            typedText = "";
+            spellCast = true;
         }
     }
+    else {
+        wrongKey = true;
+    }
 }
-
