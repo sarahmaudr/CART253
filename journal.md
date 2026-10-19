@@ -48,6 +48,14 @@ I hope viewers feel a sense of discovery when interacting with these pieces. If 
 ![Website Preview](images/eclipse.png)
 
 ## 2026-10-18
+My three prototypes are all on a Harry Potter theme. Each one reacts to something different, a click, a key or a pause.
 
+The biggest surprise was in 'Lumos!'. My light kept blinking and I could not figure out why. The problem was that I had written 'mousePressed' inside 'draw()'. I learned that event functions are never called by me but by P5, so I do not need to called them in 'draw()'. The 'Sorting Hat' pushed this idea further. It only reacts when the user does nothing, so waiting becomes the interaction.
 
-![Website Preview](images/hat.png)
+My favorite part was how much mood a few lines can create. In 'Casting Spells', a wrong letter gives a red screen and an explosion, while a finished spell gives purple and sparkles. It creates two very different outcomes. In 'Lumos!', the flapping snitch wings are a close second, since sin() and 'frameCount' make them move all by themselves.
+
+What I found the hardest was knowing where each piece of code belongs. 'random()' crashed my sketch outside of 'setup()' in 'Lumos!'. The Enter key only worked with 'key === "Enter"', not with 'keyCode' in 'Casting Spells'. 
+
+I hope people feel a little bit of magic when they play, and maybe a bit of stress in the spell game. Next, I would like to resize the light with the mouse wheel, add a timer to 'Casting Spells' and give each house its own color.
+
+![Website Preview](images/spells.png)
