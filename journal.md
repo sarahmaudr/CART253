@@ -46,3 +46,8 @@ The trickiest part of the process for me was the logic of the background in 'the
 I hope viewers feel a sense of discovery when interacting with these pieces. If I were to develop this work further, I would love to merge some of the mechanics into one scene where the disgusted plant could live through an eclipse.
 
 ![Website Preview](images/eclipse.png)
+
+## 2026-10-18
+
+
+![Website Preview](images/hat.png)

@@ -10,6 +10,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 * [Instructions assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-19)
 * [Variables assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-09-26)
 * [Conditionals assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-04)
+* [Events assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-18)
 
 ## Prototypes
 ### Pototyping: Instructions assignment
@@ -59,3 +60,19 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 ![Website Preview](images/eclipse.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/conditions/condition-prototype3/)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/conditions/condition-prototype3/js/script.js)
+
+### Prototyping : events assignment
+#### Lumos!
+![Website Preview](images/lumos.png)
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/events/events-prototype1)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/events/events-prototype1/js/script.js)
+
+#### Casting Spells
+![Website Preview](images/spells.png)
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/events/events-prototype2)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/events/events-prototype2/js/script.js)
+
+#### Sorting Hat
+![Website Preview](images/hat.png)
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/events/events-prototype3)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/events/events-prototype3/js/script.js)
