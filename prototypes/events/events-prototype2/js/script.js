@@ -2,7 +2,10 @@
  * Casting Spells
  * Sarah-Maude Roy
  * 
- * Practice your spells (or spelling). The user can practice 3 differents spells by writing them with the keys.
+ * A spell appears on screen and the player must type it letter by letter. A wrong letter changes the screen to red with an explosion, 
+ * and finishing the spell turns the screen purple with sparkles. Pressing enter at any time starts again with a new spell.
+ * 
+ * Events used: keyPressed(), with key to read the types letter.
  * 
  * Uses:
  * p5.js
@@ -11,23 +14,23 @@
 
 "use strict";
 
-// the spells
+// the list spells
 let spells = ["accio", "lumos", "expelliarmus"];
 
-// verify the current spell on the screen
+// the spell currently on the screen
 let currentSpell = "";
 
-// verify the text typed by the user
+// the letters the player has typed correctly so far
 let typedText = "";
 
-// verify whether the last key pressed was wrong
+// true when the last key pressed was the wrong letter (red screen)
 let wrongKey = false;
 
-// verify whether the player has finished typing the spell
+// true when the player has typed the whole spell correctly (purple screen)
 let spellCast = false;
 
 /**
- * creates a 1000x700 canvas a and selects random spells.
+ * creates a 1000x700 canvas and picks the first spell randomly
 */
 function setup() {
     createCanvas(1000, 700);
@@ -36,10 +39,11 @@ function setup() {
 
 
 /**
- * creates the background of the canvas, and the text (color, size, position...)
+ * chooses the background of the canvas according to the state of the game, draws the spell, typed text, emoji 
+ * and the restart instructions.
 */
 function draw() {
-    // red background when the player makes a mistake, black otherwise
+    // red background on a mistake, purple on success, black otherwise
     if (wrongKey) {
         background(120, 0, 0);
     }
@@ -49,16 +53,18 @@ function draw() {
     else {
         background(0);
     }
-    // text parameters
+    
+    // text style: centered, white, big, with a classic font
     textAlign(CENTER, CENTER);
     textSize(64);
     fill("white");
     textFont("Georgia");
 
-    // text position
+    // the spell to type, and bellow it what the player has typed so far
     text(currentSpell, width/2, height/2);
     text(typedText, width/2, height/2 + 100);
 
+    // big emoji above the spell: explosion on mistake, sparkles on success
     if (wrongKey) {
         textSize(128);
         text("💥", width/2, height/2 - 150);
@@ -68,12 +74,13 @@ function draw() {
         text("✨", width/2, height/2 - 150);
     }
 
+    // small reminder on how to restart
     textSize(16);
     text("Press ENTER for a new spell", width/2, height - 50);
 }
 
 /**
- * verify the text lenght and spelling to make sure the user casted the right spell !
+ * ENTER restarts the game. Otherwise, checks if the key is the next expected letter of the spell and updates the game state.
 */
 function keyPressed() {
     // ENTER restarts with a new spell, whatever the situation
@@ -90,12 +97,12 @@ function keyPressed() {
         return;
     }
 
-    // is it the next expected letter?
+    // is it the next expected letter of the spell?
     if (key === currentSpell[typedText.length]) {
         wrongKey = false;
         typedText = typedText + key;
 
-        // all the letters are right: the spell is cast
+        // if all the letters are right, the spell is cast
         if (typedText === currentSpell) {
             spellCast = true;
         }
