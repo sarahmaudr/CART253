@@ -14,17 +14,20 @@ let flies = [
     {
         x: 100,
         y: 125,
-        size: 10
+        size: 10,
+        buzziness: 4
     },
     {
         x: 160,
         y: 170,
-        size: 14
+        size: 14,
+        buzziness: 2
     },
     {
         x: 180,
         y: 50,
-        size: 5
+        size: 5,
+        buzziness: 3
     }
 ];
 
@@ -42,10 +45,16 @@ function setup() {
 function draw() {
     background("#87ceed");
 
-    // Display each fly in the array
-    for (let fly of flies) {
+    // Go through all the flies
+     for (let fly of flies) {
+        moveFly(fly);
         drawFly(fly);
     }
+}
+
+function moveFly(fly) {
+    fly.x += random(-fly.buzziness, fly.buzziness);
+    fly.y += random(-fly.buzziness, fly.buzziness);
 }
 
 /**
