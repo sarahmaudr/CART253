@@ -2,7 +2,8 @@
  * Ghosts!!!
  * Sarah-Maude Roy
  * 
- * 
+ * Draws multiple ghosts on a dark canvas using 'drawGhost' that fade and reappear.
+ * This creates a Halloween themed art piece.
  * 
  */
 
@@ -42,6 +43,7 @@ function draw() {
 
     // for all ghosts in the list... creates ghosts
     for(let ghost of ghosts){
+        fadeGhost(ghost);
         drawGhost(ghost);
     }
 }
@@ -62,6 +64,18 @@ function drawGhost(ghost){
     ellipse(ghost.x - 8, ghost.y - 5, 8, 15);
     ellipse(ghost.x + 8, ghost.y - 5, 8, 15);
     pop();
+}
+
+/**
+ * Changes the brightness of one ghost and reverses the fade when it 
+ * reaches black or white
+ */
+function fadeGhost(ghost){
+    ghost.brightness = ghost.brightness + ghost.fadeSpeed;
+    
+    if (ghost.brightness > 255 || ghost.brightness < 0){
+        ghost.fadeSpeed = ghost.fadeSpeed * -1;
+    }
 }
 
 /**
