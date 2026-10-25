@@ -78,7 +78,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/events/events-prototype3)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/events/events-prototype3/js/script.js)
 
-### Prototyping : Ghosts!!!
+### Prototyping : functions assignment
 
 [Functions assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-25)
 
