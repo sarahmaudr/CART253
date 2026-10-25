@@ -1,12 +1,12 @@
-# TITLE OF PROJECT
+# Spooky Messages!
 
-AUTHOR NAME
+Sarah-Maude Roy
 
 [View this project online](https://sarahmaudr.github.io/CART253/prototypes/functions/functions-prototype3)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Click on the screen to see a different Halloween message appear!
 
 ## Attribution
 

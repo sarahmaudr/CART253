@@ -1,8 +1,8 @@
 /**
- * Title of Project
+ * Spooky Messages!
  * Sarah-Maude Roy
  * 
- * 
+ * Click to show a random Halloween message. 
  * 
  * Uses:
  * p5.js
@@ -11,6 +11,7 @@
 
 "use strict";
 
+// the list of all possible messages
 let messages = [
     "Boo!🎃",
     "Happy Halloween🧛!",
@@ -18,11 +19,12 @@ let messages = [
     "👻 The ghosts are hungry tonight... 👻"
 ];
 
+
 // the sentence currently shown (starts as the first one)
-let message = "OOuuuooouuuuUUoOuh!";
+let message = "OOoOooOOOooOooOooOuh!";
 
 /**
- * 
+ * Creates a 550 x 850 canvas
 */
 function setup() {
     createCanvas(550, 850);
@@ -30,17 +32,26 @@ function setup() {
 
 
 /**
- * 
+ * Draws a black background and the current message 
+ * in the middle of the canvas.
 */
 function draw() {
     background(0);
+    drawMessage(message, 275, 425, 28);
+}
 
-    background(0);
+/**
+ * Draws a piece of text (words) centered at x, y
+ * with the given size, in the color orange.
+ */
+function drawMessage(words, x, y, size){
+    push();
     fill(255, 140, 0);
     textAlign(CENTER, CENTER);
-    textSize(32);
+    textSize(size);
     textFont("Papyrus");
-    text(message, width / 2, height / 2);
+    text(words, x, y);
+    pop();
 }
 
 /**
@@ -51,6 +62,9 @@ function getRandomMessage(){
     return chosen;
 }
 
+/**
+ * When the mouse is clicked, picks a new random message
+ */
 function mousePressed(){
     message = getRandomMessage();
 }
