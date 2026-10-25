@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# The Pumpkin
 
 Sarah-Maude Roy
 

@@ -1,5 +1,5 @@
 /**
- * Title of Project
+ * The Pumpkin
  * Sarah-Maude Roy
  * 
  * 
@@ -21,19 +21,29 @@ function setup() {
 function draw() {
     background(0);
 
-    drawPumpkin();
+    drawPumpkin(400, 400);
 }
 
-function drawPumpkin(){
+function drawPumpkin(x ,y){
+    // draws the body of the pumpkin
     push();
     fill(255, 140, 0);
-    ellipse(300, 400, 250, 300);
-    ellipse(500, 400, 250, 300);
-    ellipse(400, 400, 250, 300);
+    ellipse(x - 100, y, 250, 300);
+    ellipse(x + 100, y, 250, 300);
+    ellipse(x, y, 250, 300);
     pop();
 
+    // draws the stem
     push();
     fill("green");
-    rect(395, 200, 10, 50);
+    rect(x - 5, y - 200, 10, 50);
+    pop();
+
+    // the face of the pumpkin
+    push();
+    fill(0);
+    triangle(340, 380, 380, 380, 360, 340);
+    triangle(420, 380, 460, 380, 440, 340);
+    ellipse(x, y + 60, 120, 50);
     pop();
 }
