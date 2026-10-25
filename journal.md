@@ -61,6 +61,14 @@ I hope people feel a little bit of magic when they play, and maybe a bit of stre
 ![Website Preview](images/spells.png)
 
 ## 2026-10-25
+For this week's prototype I decided to make all three prototypes on a Halloween theme. Each one uses functions in a different way: one creates data, one draws many copies of the same thing, and one picks a random message.
 
+The biggest surprise was in 'Ghosts'. I had never thought that a function could return a whole object. 'createGhost' returns a position, a brightness and a fade speed, so I can keep ten ghosts in an array and loop through them. At first my ghosts did not fade at all. The problem was that I had put the line that changes the brightness inside the 'if', so it only ran when the ghost was already out of range. I learned that the change must always happen, and only the reversal belongs in the condition.
 
-![Website Preview]()
+My favorite part was how much one function can do. In 'The Pumpkin', I wrote 'drawPumpkin(x, y)' once and made a whole wallpaper. Then I replaced 22 lines with five loops, and the picture stayed exactly the same. That was very satisfying and it showed me what refactoring is. In 'Ghosts', 'random()' gives every ghost its own rhythm, even if they use the same code.
+
+What I found the hardest was understanding parameters. In 'Spooky Messages', I wrote 'drawMessage(words, x, y, size)' but I kept a fixed number for the text size and used 'message' inside, so my texts all landed in the same place. I also mixed up 'messages' (the list) and 'message' (the sentence shown), and all the sentences appeared at once. I learned to check that every parameter really replaces a number or a variable inside the function.
+
+I decided not to make anything move, to keep the prototypes simple. I hope people enjoy the spooky mood, and maybe notice how a small function can fill a whole screen. Next, I would like to make one ghost move across the screen in 'Ghosts!!!' and build the messages from separate lists of words in 'Spooky Messages!".
+
+![Website Preview](images/pumpkin.png)
