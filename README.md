@@ -90,7 +90,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 #### The Pumpkin
 ![Website Preview](images/pumpkin.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/functions/functions-prototype2)
-- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/function/functions-prototype2/js/script.js)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/functions/functions-prototype2/js/script.js)
 
 #### Spooky Messages!
 ![Website Preview](images/Spooky.png)
