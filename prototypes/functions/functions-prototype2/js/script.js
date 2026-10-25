@@ -2,7 +2,7 @@
  * The Pumpkin
  * Sarah-Maude Roy
  * 
- * Creates a pumpkin wallpaper for halloween, using functions.
+ * Creates a pumpkin wallpaper for halloween, using functions and loops.
  * 
  */
 
