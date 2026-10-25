@@ -2,14 +2,14 @@
  * The Pumpkin
  * Sarah-Maude Roy
  * 
- * Creates a 
+ * Creates a pumpkin wallpaper for halloween, using functions.
  * 
  */
 
 "use strict";
 
 /**
- * 
+ * Creates a 800 x 800 canvas
 */
 function setup() {
     createCanvas(800, 800);
@@ -17,39 +17,36 @@ function setup() {
 
 
 /**
- * 
+ * Creates a dark background and calls the function 'drawPumpkin' to draw multiple pumpkins at different positions.
 */
 function draw() {
+    // black background
     background(0);
 
-    drawPumpkin(100, 0);
-    drawPumpkin(300, 0);
-    drawPumpkin(500, 0);
-    drawPumpkin(700, 0);
+    for (let x = 100; x <= 700; x +=200){
+    drawPumpkin(x, 0);
+    }
+ 
+    for (let x = 0; x <= 800; x +=200){
+    drawPumpkin(x, 200);
+    }
 
-    drawPumpkin(0, 200);
-    drawPumpkin(200, 200);
-    drawPumpkin(400, 200);
-    drawPumpkin(600, 200);
-    drawPumpkin(800, 200);
+    for (let x = 100; x <= 700; x +=200){
+    drawPumpkin(x, 400);
+    }
 
-    drawPumpkin(100, 400);
-    drawPumpkin(300, 400);
-    drawPumpkin(500, 400);
-    drawPumpkin(700, 400);
+    for (let x = 0; x <= 800; x +=200){
+    drawPumpkin(x, 600);
+    }
 
-    drawPumpkin(0, 600);
-    drawPumpkin(200, 600);
-    drawPumpkin(400, 600);
-    drawPumpkin(600, 600);
-    drawPumpkin(800, 600);
-
-    drawPumpkin(100, 800);
-    drawPumpkin(300, 800);
-    drawPumpkin(500, 800);
-    drawPumpkin(700, 800);
+    for (let x = 100; x <= 700; x +=200){
+    drawPumpkin(x, 800);
+    }
 }
 
+/**
+ * Draws a pumpkin with the positions centered at x, y.
+ */
 function drawPumpkin(x ,y){
     // draws the body of the pumpkin
     push();
