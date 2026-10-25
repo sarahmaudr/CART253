@@ -5,6 +5,9 @@
  * Draws multiple ghosts on a dark canvas using 'drawGhost' that fade and reappear.
  * This creates a Halloween themed art piece.
  * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";

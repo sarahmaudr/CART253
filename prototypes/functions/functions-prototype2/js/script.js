@@ -4,6 +4,9 @@
  * 
  * Creates a pumpkin wallpaper for halloween, using functions and loops.
  * 
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";

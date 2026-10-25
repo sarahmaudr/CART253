@@ -59,3 +59,8 @@ What I found the hardest was knowing where each piece of code belongs. 'random()
 I hope people feel a little bit of magic when they play, and maybe a bit of stress in the spell game. Next, I would like to resize the light with the mouse wheel, add a timer to 'Casting Spells' and give each house its own color.
 
 ![Website Preview](images/spells.png)
+
+## 2026-10-25
+
+
+![Website Preview]()
