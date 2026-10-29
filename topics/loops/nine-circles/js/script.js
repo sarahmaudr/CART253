@@ -1,5 +1,5 @@
 /**
- * Vertical circles
+ * Nine Cirlces
  * Pippin Barr
  * 
  * Draws a series of circles from the top to the bottom of the canvas.
@@ -20,17 +20,15 @@ function setup() {
  */
 function draw() {
     background(0);
-
-    // Draw a series of 50-pixel diameter circles
-    // Starting at the top of the canvas
-    // And ending at the bottom
-    ellipse(200, 0, 50);
-    ellipse(200, 50, 50);
-    ellipse(200, 100, 50);
-    ellipse(200, 150, 50);
-    ellipse(200, 200, 50);
-    ellipse(200, 250, 50);
-    ellipse(200, 300, 50);
-    ellipse(200, 350, 50);
-    ellipse(200, 400, 50);
+    
+    // Set up the position and diameter of the first circle
+    let x = width/2;
+    let startY = 0;
+    let diameter = 50;
+    
+    // Count with i from 0 up to 8
+    for (let i = 0; i < 9; i++) {
+         let y = startY + i * diameter;
+        ellipse(x, y, diameter);
+    }
 }
