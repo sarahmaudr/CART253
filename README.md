@@ -12,6 +12,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 * [Conditionals assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-04)
 * [Events assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-18)
 * [Functions assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-25)
+* [arrays assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-11-01)
 
 ## Prototypes
 ### Pototyping: Instructions assignment
@@ -96,3 +97,22 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 ![Website Preview](images/Spooky.png)
 - [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/functions/functions-prototype3)
 - [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/functions/functions-prototype3/js/script.js)
+
+### Prototyping : arrays assignment
+
+[arrays assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-11-01)
+
+#### Snow Blizzard
+![Website Preview]()
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/arrays/arrays-prototype1)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/arrays/arrays-prototype1/js/script.js)
+
+#### GIFTS GIFTS GIFTS !
+![Website Preview]()
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/arrays/arrays-prototype2)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/arrays/arrays-prototype2/js/script.js)
+
+#### Reindeer 🦌🦌🦌🦌🦌🦌🦌🦌 
+![Website Preview]()
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/arrays/arrays-prototype3)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/arrays/arrays-prototype3/js/script.js)
