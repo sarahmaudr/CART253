@@ -14,7 +14,7 @@
 //the array that holds every snowflake 
 let flakes = []
 // the number of snowflakes there are when the program starts
-const NUM_FLAKES = 250;
+const NUM_FLAKES = 300;
 
 /**
  * Creates the canvas and fills the flakes array with the starting snowflakes
@@ -80,4 +80,13 @@ function draw() {
         fill(255);
         ellipse(flake.x, flake.y, flake.size);
         }
+}
+
+/**
+ * When the mouse is clicked, adds 20 new snowflakes above the screen
+ */
+function mousePressed() {
+    for (let i = 0; i < 20; i++) {
+        flakes.push(createFlake(mouseX + random(-30, 30), random(-50, 0)));
+    }
 }

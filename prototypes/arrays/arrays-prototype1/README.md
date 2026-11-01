@@ -6,7 +6,7 @@ Sarah-Maude Roy
 
 ## Description
 
-Move the mouse around to control the wind direction of the blizzard.
+Move the mouse around to control the wind direction of the blizzard, and click on the screen to add more snowflakes.
 
 ## Attribution
 
