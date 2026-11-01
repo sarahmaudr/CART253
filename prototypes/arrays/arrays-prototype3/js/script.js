@@ -1,24 +1,25 @@
 /**
- * Title of Project
- * Author Name
+ * Title
+ * Sarah-Maude Roy
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Uses:
+ * p5.js
+ * https://p5js.org/
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * 
 */
 function setup() {
-
+    createCanvas(1000, 600);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * 
 */
 function draw() {
-
+    background(15, 25, 55);
 }
