@@ -40,6 +40,8 @@ let wrapColors = [
 
 let currentColor = [200, 30, 40];
 
+let received = [];
+
 /**
  * 
 */
@@ -60,6 +62,7 @@ function draw() {
         shakeTimer--;
         if (shakeTimer === 0) {
             currentGift = random(gifts); // the reveal
+            received.push(currentGift);
         }
     }
 
@@ -79,6 +82,18 @@ function draw() {
     textSize(24);
     fill(255);
     text(currentGift, present.x, present.y + present.size / 2 + 50);
+    
+    textAlign(LEFT);
+    textSize(18);
+    fill(255);
+    text("Gifts received:", 600, 80);
+
+    // Only show the 12 most recent so the list fits on screen
+    let start = max(0, received.length - 12);
+    for (let i = start; i < received.length; i++) {
+        text((i + 1) + ". " + received[i], 600, 120 + (i - start) * 30);
+    }
+
 }
 
 /**
