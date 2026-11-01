@@ -74,6 +74,14 @@ I decided not to make anything move, to keep the prototypes simple. I hope peopl
 ![Website Preview](images/pumpkin.png)
 
 ## 2026-11-01
+For this assignment I made three Christmas-themed prototypes, each using arrays in a different way: a snowfall, a gift shaker and a chain of reindeer.
 
+In 'Snow Blizzard', the array held objects that move. What surprised me most was how little code it took to go from one snowflake to a hundred. Once the flake was an object inside an array, one 'for...of' loop could move and draw all of them. I also learned that where a line goes inside the loop matters. My wind effect did nothing at first because I had put it inside the if block that only runs when a flake wraps around. Another bug made all the flakes vanish. My createFlake() function didn’t set wobbleOffset, so the value was undefined and the flakes disappeared. That taught me that one missing property in an object can break everything that uses it.
 
-![Website Preview]()
+In 'Gift Shaker', the arrays held plain data instead of moving things: strings for the gifts and [r, g, b] arrays for the wrapping colors. Using random(gifts) to pick an item was very simple. The received array grows with push(), so it works as a record of everything the player has opened. My code also crashed at first because I declared shakeTimer below draw(), which showed me that the order of declarations matters. The browser console helped me find errors like a typo in fill.
+
+In 'Reindeer Chain', the elements depend on each other. Each reindeer follows the one at i - 1 using lerp(), so the loop needed an index. This was the part I found hardest to understand at first, because the leader behaves differently from the rest. Moving the drawing into its own drawReindeer() function made the code easier to read and let me give the leader a red nose with a single true or false value. I reused the snow-array idea for the background.
+
+I would like someone playing these to enjoy the small details, like the silly gifts and the red nose. If I developed this further, I would make the reindeer turn toward the direction they are moving and add names from an array.
+
+![Website Preview](images/Reindeer.png)

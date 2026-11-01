@@ -12,7 +12,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 * [Conditionals assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-04)
 * [Events assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-18)
 * [Functions assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-10-25)
-* [arrays assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-11-01)
+* [Arrays assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-11-01)
 
 ## Prototypes
 ### Pototyping: Instructions assignment
@@ -100,7 +100,7 @@ This is Sarah-Maude Roy’s coursework repository for CART253. The purpose of th
 
 ### Prototyping : arrays assignment
 
-[arrays assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-11-01)
+[Arrays assignment Journal Entry](https://github.com/sarahmaudr/CART253/blob/main/journal.md#2026-11-01)
 
 #### Snow Blizzard
 ![Website Preview](images/Blizzard.png)
