@@ -22,6 +22,9 @@ let gifts = [
 ];
 let currentGift = "";
 
+let shakeTimer = 0;
+const SHAKE_DURATION = 40;
+
 let present = {
     x: 300,
     y: 350,
@@ -42,17 +45,26 @@ function setup() {
 function draw() {
     background(20, 60, 40);
 
+    let shakeX = 0;
+    if (shakeTimer > 0) {
+        shakeX = random(-8, 8);
+        shakeTimer--;
+        if (shakeTimer === 0) {
+            currentGift = random(gifts); // the reveal
+        }
+    }
+
     rectMode(CENTER);
     noStroke();
 
     // Box
     fill(200, 30, 40);
-    rect(present.x, present.y, present.size, present.size);
+    rect(present.x + shakeX, present.y, present.size, present.size);
 
     // Ribbon (one vertical strip, one horizontal strip)
     fill(240, 190, 40);
-    rect(present.x, present.y, 24, present.size);
-    rect(present.x, present.y, present.size, 24);
+    rect(present.x + shakeX, present.y, 24, present.size);
+    rect(present.x + shakeX, present.y, present.size, 24);
 
     textAlign(CENTER);
     textSize(24);
@@ -64,9 +76,10 @@ function draw() {
  * 
  */
 function mousePressed() {
-    // Only react if the click is on the present
-    if (abs(mouseX - present.x) < present.size / 2 &&
+    if (shakeTimer === 0 &&
+        abs(mouseX - present.x) < present.size / 2 &&
         abs(mouseY - present.y) < present.size / 2) {
-        currentGift = random(gifts); // random() can pick from an array!
+        shakeTimer = SHAKE_DURATION;
+        currentGift = ""; 
     }
 }
