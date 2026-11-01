@@ -31,6 +31,15 @@ let present = {
     size: 160,
 };
 
+let wrapColors = [
+    [200, 30, 40],   // red
+    [40, 100, 200],  // blue
+    [150, 60, 180],  // purple
+    [240, 140, 30],  // orange
+];
+
+let currentColor = [200, 30, 40];
+
 /**
  * 
 */
@@ -58,7 +67,7 @@ function draw() {
     noStroke();
 
     // Box
-    fill(200, 30, 40);
+    fill(currentColor[0], currentColor[1], currentColor[2]);
     rect(present.x + shakeX, present.y, present.size, present.size);
 
     // Ribbon (one vertical strip, one horizontal strip)
@@ -76,6 +85,8 @@ function draw() {
  * 
  */
 function mousePressed() {
+    currentColor = random(wrapColors);
+
     if (shakeTimer === 0 &&
         abs(mouseX - present.x) < present.size / 2 &&
         abs(mouseY - present.y) < present.size / 2) {
