@@ -1,4 +1,4 @@
-# TITLE
+# GIFTS GIFTS GIFTS !
 
 Sarah-Maude Roy
 
@@ -6,7 +6,7 @@ Sarah-Maude Roy
 
 ## Description
 
-This description 
+Click on the gift to reveal what you received !
 
 ## Attribution
 
