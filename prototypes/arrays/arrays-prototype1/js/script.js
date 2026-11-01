@@ -29,8 +29,8 @@ function setup() {
     createCanvas(1000, 600);
 
     for (let i = 0; i < NUM_FLAKES; i++) {
-    flakes.push(createFlake());
-  }
+        flakes.push(createFlake());
+    }
 }
 
 function createFlake() {
@@ -52,8 +52,13 @@ function draw() {
     for (let flake of flakes) {
         flake.y += flake.speed;
 
-    noStroke();
-    fill(255);
-    ellipse(flake.x, flake.y, flake.size);
-    }
+        if (flake.y > height + flake.size) {
+            flake.y = -flake.size;
+            flake.x = random(0, width);
+        }
+
+        noStroke();
+        fill(255);
+        ellipse(flake.x, flake.y, flake.size);
+        }
 }
