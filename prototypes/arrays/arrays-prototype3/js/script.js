@@ -37,4 +37,14 @@ function draw() {
     for (let r of reindeer) {
     ellipse(r.x, r.y, 40);
     }
+
+    // The leader follows the mouse
+    reindeer[0].x = lerp(reindeer[0].x, mouseX, 0.1);
+    reindeer[0].y = lerp(reindeer[0].y, mouseY, 0.1);
+
+    // Everyone else follows the one in front
+    for (let i = 1; i < reindeer.length; i++) {
+        reindeer[i].x = lerp(reindeer[i].x, reindeer[i - 1].x, 0.1);
+        reindeer[i].y = lerp(reindeer[i].y, reindeer[i - 1].y, 0.1);
+    }
 }
