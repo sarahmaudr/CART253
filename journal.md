@@ -72,3 +72,8 @@ What I found the hardest was understanding parameters. In 'Spooky Messages', I w
 I decided not to make anything move, to keep the prototypes simple. I hope people enjoy the spooky mood, and maybe notice how a small function can fill a whole screen. Next, I would like to make one ghost move across the screen in 'Ghosts!!!' and build the messages from separate lists of words in 'Spooky Messages!".
 
 ![Website Preview](images/pumpkin.png)
+
+## 2026-11-01
+
+
+![Website Preview]()
