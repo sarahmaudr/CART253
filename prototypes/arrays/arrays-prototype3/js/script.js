@@ -1,6 +1,10 @@
 /**
- * Title
+ * Reindeer 🦌🦌🦌🦌🦌🦌🦌🦌
  * Sarah-Maude Roy
+ * 
+ * A red-nosed reindeer follows the mouse and a chain of reindeer
+ * follows behind it, all stored in an array. The background is a
+ * snowy Christmas night with stars, a moon and falling snow.
  * 
  * Uses:
  * p5.js
@@ -9,22 +13,27 @@
 
 "use strict";
 
+// The array of reindeer
 let reindeer = [];
+// How many reindeer are in the chain
 const NUM_REINDEER = 8;
 
+// Arrays for the background snowflakes and stars
 let snow = [];
 let stars = [];
 
 /**
- * 
+ * Creates the canvas, then fills the reindeer, snow and stars arrays
 */
 function setup() {
     createCanvas(1000, 600);
 
+    // Make the reindeer, all starting in the middle of the screen
     for (let i = 0; i < NUM_REINDEER; i++) {
         reindeer.push({ x: width / 2, y: height / 2 });
     }
 
+    // Make 80 snowflakes at random positions with random sizes and speeds
     for (let i = 0; i < 80; i++) {
         snow.push({
             x: random(0, width),
@@ -34,6 +43,7 @@ function setup() {
         });
     }
 
+    // Make 40 stars in the upper part of the sky
     for (let i = 0; i < 40; i++) {
         stars.push({
             x: random(0, width),
@@ -45,9 +55,10 @@ function setup() {
 
 
 /**
- * 
+ * Draws the background, moves the chain of reindeer and draws them
 */
 function draw() {
+    // dark blue background
     background(15, 25, 55);
     drawBackground();
 

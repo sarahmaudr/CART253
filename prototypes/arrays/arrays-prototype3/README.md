@@ -1,4 +1,4 @@
-# TITLE
+# Reindeer 🦌🦌🦌🦌🦌🦌🦌🦌
 
 Sarah-Maude Roy
 
@@ -6,7 +6,7 @@ Sarah-Maude Roy
 
 ## Description
 
-This description
+Lead Santa's Reindeer with your mouse.
 
 ## Attribution
 
