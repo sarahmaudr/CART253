@@ -14,7 +14,7 @@ let fortune;
 
 async function preload() {
   // Used in preload, loadJSON will just return the data into our variable
-  tarot = await loadJSON("assets-data/tarot_interpretations.json");
+  tarot = await loadJSON("assets/data/tarot_interpretations.json");
 }
 
 async function setup() {
