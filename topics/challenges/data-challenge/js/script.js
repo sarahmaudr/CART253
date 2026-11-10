@@ -13,8 +13,10 @@
 
 "use strict";
 
+
 let carData = undefined;
 let dinosaurData = undefined;
+let emojiData = undefined;
 let langData = undefined;
 let lang = "fr";
 
@@ -27,6 +29,7 @@ let carName = "Click to generate a car name.";
 async function preload() {
     carData = await loadJSON("assets/data/cars.json");
     dinosaurData = await loadJSON("assets/data/dinosaurs.json");
+    emojiData = await loadJSON("assets/data/emojis.json");
 }
 
 
@@ -59,5 +62,6 @@ function draw() {
 function mousePressed() {
     let car = random(carData.cars);
     let dinosaur = random(dinosaurData.dinosaurs);
-    carName = car + " " + dinosaur ;
+    let emoji = random(emojiData.emojis);
+    carName = car + " " + dinosaur + " " + emoji;
 }
