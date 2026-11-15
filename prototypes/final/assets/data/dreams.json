@@ -1,36 +1,24 @@
-
 {
     "description": "Create your own dreams",
     "locations": [
-        {
-            "name": "Above the clouds",
-            "background": "lightPink"
-        },
-        {
-            "name": "An enchanted forest",
-            "background": "lightGreen"
-        },
-        {
-            "name": "Deep beneath the ocean",
-            "background": "lightBlue"
-        }
+        { "name": "Above the clouds", "type": "clouds", "background": [255, 200, 225] },
+        { "name": "An enchanted forest", "type": "forest", "background": [170, 225, 190] },
+        { "name": "Deep beneath the ocean", "type": "ocean", "background": [120, 190, 235] }
     ],
-
     "objects": [
-        "A flying whale",
-        "A golden door",
-        "A glowing clock",
-        "A floating staircase",
-        "A giant butterfly",
-        "A mysterious mirror"
+        { "name": "A flying whale", "shape": "whale" },
+        { "name": "A golden door", "shape": "door" },
+        { "name": "A glowing clock", "shape": "clock" },
+        { "name": "A floating staircase", "shape": "stairs" },
+        { "name": "A giant butterfly", "shape": "butterfly" },
+        { "name": "A mysterious mirror", "shape": "mirror" }
     ],
-
     "feelings": [
-        "Wonder",
-        "Mystery",
-        "Curiosity",
-        "Nostalgia",
-        "Serenity",
-        "Fear"
+        { "name": "Wonder", "tint": [255, 230, 120], "sparkles": 40 },
+        { "name": "Mystery", "tint": [90, 60, 150], "sparkles": 15 },
+        { "name": "Curiosity", "tint": [255, 160, 90], "sparkles": 25 },
+        { "name": "Nostalgia", "tint": [200, 150, 110], "sparkles": 10 },
+        { "name": "Serenity", "tint": [150, 220, 220], "sparkles": 20 },
+        { "name": "Fear", "tint": [40, 0, 40], "sparkles": 5 }
     ]
 }
