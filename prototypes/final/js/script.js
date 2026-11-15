@@ -56,6 +56,18 @@ function generateDream() {
         object: dreams.objects[randomObject],
         feeling: dreams.feelings[randomFeeling]
     };
+
+    // Creates a title using the selected location
+    currentDream.title = "A World " + currentDream.location.name;
+
+    // Creates a description using the selected dream elements
+    currentDream.description = "You discover " 
+        + currentDream.object.toLowerCase() 
+        + " in " 
+        + currentDream.location.name.toLowerCase() 
+        + ". A feeling of " 
+        + currentDream.feeling.toLowerCase() 
+        + " surrounds you.";
 }
 
 /**
@@ -65,12 +77,20 @@ function draw() {
     // Changes the background according to the dream location
     background(currentDream.location.background);
 
-    textSize(32);
+    // Displays the dream title
+    textSize(40);
+    text(currentDream.title, 100, 100);
+
+    textSize(24);
 
     // Displays the dream elements
-    text(currentDream.location.name, 100, 100);
-    text(currentDream.object, 100, 200);
+    text(currentDream.location.name, 100, 200);
+    text(currentDream.object, 100, 250);
     text(currentDream.feeling, 100, 300);
+
+    // Displays the dream description
+    textSize(20);
+    text(currentDream.description, 100, 400, 800);
 }
 
 /**
