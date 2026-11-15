@@ -4,16 +4,15 @@ Sarah-Maude Roy
 
 ## Description
 
+Click to generate a random dream, drawn with code. Each dream combines a place, a strange object and a feeling.
+
+![Website Preview](assets/images/finalWeek1.png)
+- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/final)
+- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/final/js/script.js)
 
 
 ## Useful links
 * [Reflective Journal](journal.md)
-
-## Prototypes
-![Website Preview](images/dragonFly.png)
-- [Running Prototype](https://sarahmaudr.github.io/CART253/prototypes/)
-- [Code Repository](https://github.com/sarahmaudr/CART253/blob/main/prototypes/)
-
 
 ## Attribution
 

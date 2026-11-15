@@ -2,7 +2,8 @@
  * Dream generator
  * Sarah-Maude Roy
  * 
- * 
+ * An interactive piece that builds a random, illustrated dream every time you click. Each dream combines a place, 
+ * a strange object and a feeling, and each one is drawn on screen.
  * 
  * Uses:
  * p5.js
