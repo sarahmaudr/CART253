@@ -1,4 +1,4 @@
-# TITLE
+# Dream generator
 
 Sarah-Maude Roy
 
