@@ -11,10 +11,22 @@
 
 "use strict";
 
+let dreams = [];
+
+let currentDream = null;
+
+
+async function preload() {
+    dreams = await loadJSON("assets/data/dreams.json");
+}
+
 /**
  * 
 */
-function setup() {
+async function setup() {
+    createCanvas(1000, 800);
+
+    await preload();
 
 }
 

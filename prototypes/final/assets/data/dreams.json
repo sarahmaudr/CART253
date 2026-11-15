@@ -1,0 +1,29 @@
+{
+    "description": "Create your own dreams", 
+    "dreams": [
+        {
+            "title": "The Floating Island",
+            "location": "Above the clouds",
+            "object": "A flying whale",
+            "feeling": "Wonder",
+            "description": "You discover an island floating above an endless ocean.",
+            "background": "purple"
+        },
+        {
+            "title": "The Forgotten Forest",
+            "location": "An enchanted forest",
+            "object": "A golden door",
+            "feeling": "Mystery",
+            "description": "You find a mysterious door hidden between ancient trees.",
+            "background": "green"
+        },
+        {
+            "title": "The Underwater City",
+            "location": "Deep beneath the ocean",
+            "object": "A glowing clock",
+            "feeling": "Curiosity",
+            "description": "You discover a forgotten city beneath the waves.",
+            "background": "blue"
+        }
+    ]
+}
