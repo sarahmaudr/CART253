@@ -283,11 +283,34 @@ function drawObject(dream) {
 
         pop();
 
-    } else if (dream.object.shape === "stairs") {
-        fill("green");
-            ellipse(200,100,100,100);
-        
+    } else if (dream.object.shape === "moon") {
+        push();
+        translate(280, -150);
+        noStroke();
 
+        // Full moon
+        fill("#c0c0bf");
+        ellipse(0, 0, 320, 320);
+
+        // Craters 
+        fill("#cbcbca");
+        ellipse(-70, -60, 78, 78);
+        ellipse(60, -90, 52, 52);
+        ellipse(85, 30, 96, 96);
+        ellipse(-40, 70, 62, 62);
+        ellipse(-105, 40, 36, 36);
+        ellipse(20, -20, 30, 30);
+
+        fill("#8b8b88");
+        ellipse(-70, -60, 64, 64);
+        ellipse(60, -90, 40, 40);
+        ellipse(85, 30, 80, 80);
+        ellipse(-40, 70, 48, 48);
+        ellipse(-105, 40, 26, 26);
+        ellipse(20, -20, 20, 20);
+
+        pop();
+        
     } else if (dream.object.shape === "butterfly") {
         fill("yellow");
             ellipse(200,100,100,100);

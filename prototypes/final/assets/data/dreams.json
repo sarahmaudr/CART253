@@ -8,7 +8,7 @@
     "objects": [
         { "name": "A flying whale", "shape": "whale" },
         { "name": "A glowing clock", "shape": "clock" },
-        { "name": "A floating staircase", "shape": "stairs" },
+        { "name": "A floating staircase", "shape": "moon" },
         { "name": "A giant butterfly", "shape": "butterfly" },
         { "name": "A mysterious mirror", "shape": "mirror" }
     ],
