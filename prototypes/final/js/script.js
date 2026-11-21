@@ -77,6 +77,8 @@ function draw() {
     drawObject(currentDream);
     pop();
 
+    drawDoor();
+
     //drawFeeling(currentDream);
     //drawText(currentDream);
 }
@@ -124,6 +126,13 @@ function drawLocation(dream) {
     }
 }
 
+/**
+ * 
+ */
+function drawDoor () {
+
+}
+
 function drawObject(dream) {
     
     //Whale
@@ -165,17 +174,62 @@ function drawObject(dream) {
         ellipse(50, -60, 14, 14);
 
         pop();
-    }
-
-    else if (dream.object.shape === "door") {
-        fill("orange");
-            ellipse(0,0,100,100);
-        
 
     } else if (currentDream.object.shape === "clock") {
-        fill("red");
-            ellipse(200,100,100,100);
-        
+        push();
+        translate(-250, 100); // left and lower
+        noStroke();
+
+        // Base
+        fill("#4a2c17");
+        rect(-70, 150, 140, 30);
+
+        // Main body (the tall case)
+        fill("#6b3f1f");
+        rect(-55, -60, 110, 215);
+
+        // Glass door on the lower part (shows the pendulum)
+        fill("#2e1a0d");
+        rect(-35, 55, 70, 85);
+
+        // Pendulum
+        stroke("#d4af37");
+        strokeWeight(3);
+        line(0, 55, 0, 115);
+        noStroke();
+        fill("#d4af37");
+        ellipse(0, 115, 24, 24);
+
+        // Head of the clock (top part, wider than the body)
+        fill("#4a2c17");
+        rect(-65, -150, 130, 100);
+
+        // Roof (triangle on top)
+        triangle(-75, -150, 75, -150, 0, -200);
+
+        // Clock face
+        fill("#f5ecd0");
+        ellipse(0, -100, 85, 85);
+
+        // Hour marks (12, 3, 6, 9)
+        fill("black");
+        ellipse(0, -137, 5, 5);
+        ellipse(37, -100, 5, 5);
+        ellipse(0, -63, 5, 5);
+        ellipse(-37, -100, 5, 5);
+
+        // Clock hands
+        stroke("black");
+        strokeWeight(3);
+        line(0, -100, 0, -128);   // minute hand
+        line(0, -100, 18, -100);  // hour hand
+        noStroke();
+
+        // Center dot
+        fill("black");
+        ellipse(0, -100, 8, 8);
+
+        pop();
 
     } else if (dream.object.shape === "stairs") {
         fill("green");
