@@ -316,7 +316,7 @@ function drawObject(dream) {
     } else if (dream.object.shape === "butterfly") {
         // Butterfly
         push();
-        translate(-280, -150);
+        translate(-250, -100);
         noStroke();
 
         // Wings flap by squeezing the width of the wings
@@ -364,9 +364,71 @@ function drawObject(dream) {
         ellipse(30, -145, 10, 10);
 
         pop();
-           
-    } else if (dream.object.shape === "mirror") {
-        fill("blue");
-            ellipse(200,100,100,100);
     }
+    else if (dream.object.shape === "mirror") {
+        drawMirror(-250, 203, 0.9);  // left
+        drawMirror(250, 203, 0.9);   // right
+    }
+}
+
+/**
+ * Draws an old ornate mirror (static, no glow).
+ * x, y = center of the mirror, s = size (1 = normal)
+ */
+function drawMirror(x, y, s = 1) {
+    push();
+    translate(x, y);
+    scale(s);
+    noStroke();
+
+    // Base block
+    fill("#5a4010");
+    rect(-110, 165, 220, 32);
+
+    // Outer frame (dark old wood, arched top)
+    fill("#4a3410");
+    rect(-100, -170, 200, 340);
+    arc(0, -170, 200, 200, PI, TWO_PI);
+
+    // Gold layer
+    fill("#a8842a");
+    rect(-92, -170, 184, 335);
+    arc(0, -170, 184, 184, PI, TWO_PI);
+
+    // Dark carved rim around the glass
+    fill("#5a4010");
+    rect(-74, -170, 148, 335);
+    arc(0, -170, 148, 148, PI, TWO_PI);
+
+    // Ornament dots along the sides of the frame
+    fill("#d9b84a");
+    for (let oy = -150; oy <= 150; oy += 50) {
+        ellipse(-83, oy, 10, 10);
+        ellipse(83, oy, 10, 10);
+    }
+
+    // Ornament dots following the arch
+    for (let i = 1; i < 6; i++) {
+        let a = PI + i * PI / 6;
+        ellipse(cos(a) * 83, -170 + sin(a) * 83, 10, 10);
+    }
+
+    // Crown on top of the arch
+    fill("#a8842a");
+    triangle(-20, -262, 20, -262, 0, -300);
+    ellipse(0, -300, 16, 16);
+    triangle(-45, -250, -25, -250, -42, -280);
+    triangle(25, -250, 45, -250, 42, -280);
+
+    // Glass 
+    fill("#8e9fae");
+    rect(-66, -170, 132, 330);
+    arc(0, -170, 132, 132, PI, TWO_PI);
+
+    // Fixed light streaks on the glass
+    fill(255, 255, 255, 75);
+    quad(-50, -150, -28, -150, 22, 100, 0, 100);
+    quad(-18, -150, -8, -150, 42, 100, 32, 100);
+
+    pop();
 }
