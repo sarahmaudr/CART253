@@ -187,8 +187,8 @@ function drawDoor () {
 
 function drawObject(dream) {
     
-    //Whale
     if (dream.object.shape === "whale") {
+        //Whale
         push();
         translate(-60, -80);
         noStroke();
@@ -228,6 +228,7 @@ function drawObject(dream) {
         pop();
 
     } else if (currentDream.object.shape === "clock") {
+        // Clock
         push();
         translate(-280, 150); // left and lower
         noStroke();
@@ -284,6 +285,7 @@ function drawObject(dream) {
         pop();
 
     } else if (dream.object.shape === "moon") {
+        // Moon
         push();
         translate(280, -150);
         noStroke();
@@ -312,10 +314,57 @@ function drawObject(dream) {
         pop();
         
     } else if (dream.object.shape === "butterfly") {
-        fill("yellow");
-            ellipse(200,100,100,100);
-        
-        
+        // Butterfly
+        push();
+        translate(-280, -150);
+        noStroke();
+
+        // Wings flap by squeezing the width of the wings
+        let flap = 0.75 + sin(frameCount * 0.1) * 0.25;
+
+        // Glow
+        for (let i = 0; i < 4; i++) {
+            fill(255, 180, 255, 18);
+            ellipse(0, 0, 260 + i * 40, 260 + i * 40);
+        }
+
+        // Upper wings (big)
+        fill("#2c5786");
+        ellipse(-80 * flap, -45, 200 * flap, 170);
+        ellipse(80 * flap, -45, 200 * flap, 170);
+
+        // Lower wings (smaller)
+        fill("#a20676");
+        ellipse(-60 * flap, 65, 150 * flap, 110);
+        ellipse(60 * flap, 65, 150 * flap, 110);
+
+        // Wing patterns in the middle
+        fill(230, 150, 50);
+        ellipse(-85 * flap, -50, 90 * flap, 70);
+        ellipse(85 * flap, -50, 90 * flap, 70);
+        fill("rgb(255, 214, 160)");
+        ellipse(-60 * flap, 65, 66 * flap, 40);
+        ellipse(60 * flap, 65, 66 * flap, 40);
+
+        // Body
+        fill("#2b1450");
+        ellipse(0, 10, 24, 190);
+
+        // Head
+        ellipse(0, -90, 30, 30);
+
+        // Antennae
+        stroke("#2b1450");
+        strokeWeight(3);
+        line(-4, -100, -30, -145);
+        line(4, -100, 30, -145);
+        noStroke();
+        fill("#fff3a0");
+        ellipse(-30, -145, 10, 10);
+        ellipse(30, -145, 10, 10);
+
+        pop();
+           
     } else if (dream.object.shape === "mirror") {
         fill("blue");
             ellipse(200,100,100,100);
