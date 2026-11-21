@@ -71,13 +71,13 @@ function draw() {
     background(currentDream.location.background);
     drawLocation(currentDream);
 
+    drawDoor();
+
     // The object floats gently up and down
     push();
     translate(width / 2, 350 + sin(frameCount * 0.03) * 12);
     drawObject(currentDream);
     pop();
-
-    drawDoor();
 
     //drawFeeling(currentDream);
     //drawText(currentDream);
@@ -127,10 +127,62 @@ function drawLocation(dream) {
 }
 
 /**
- * 
+ *  Draws a permanent magical door
  */
 function drawDoor () {
+    push();
+    translate(500, 760); // centered horizontally, lower
+    scale(1.2)
+    noStroke();
 
+    // Pulsing magical glow
+    let pulse = sin(frameCount * 0.05) * 12;
+    for (let i = 0; i < 5; i++) {
+        fill(190, 130, 255, 25);
+        ellipse(0, -140, 170 + i * 35 + pulse, 300 + i * 35 + pulse);
+    }
+
+    // Magical light on the floor
+    fill(200, 150, 255, 80);
+    ellipse(0, 0, 160, 24);
+
+    // Frame
+    fill("#2b1450");
+    rect(-72, -232, 144, 232);
+    arc(0, -232, 144, 144, PI, TWO_PI);
+
+    // Door
+    fill("#6a3fb5");
+    rect(-60, -220, 120, 220);
+    arc(0, -220, 120, 120, PI, TWO_PI);
+
+    // Panels
+    fill("#7d52c9");
+    rect(-45, -170, 40, 70);
+    rect(5, -170, 40, 70);
+    rect(-45, -85, 40, 60);
+    rect(5, -85, 40, 60);
+
+    // Glowing star 
+    fill(255, 240, 150, 120 + sin(frameCount * 0.08) * 80);
+    ellipse(0, -275 + 60, 30, 30);
+    fill("#fff3a0");
+    ellipse(0, -215, 12, 12);
+
+    // Golden knob
+    fill("#d4af37");
+    ellipse(40, -100, 14, 14);
+
+    // Twinkling sparkles around the door
+    let twinkle = 150 + sin(frameCount * 0.1) * 100;
+    fill(255, 255, 255, twinkle);
+    ellipse(-95, -200, 8, 8);
+    ellipse(100, -150, 6, 6);
+    ellipse(-110, -80, 5, 5);
+    ellipse(95, -250, 7, 7);
+    ellipse(-80, -270, 5, 5);
+
+    pop();
 }
 
 function drawObject(dream) {
@@ -138,7 +190,7 @@ function drawObject(dream) {
     //Whale
     if (dream.object.shape === "whale") {
         push();
-        translate(-60, 0); // draw() already centers the object
+        translate(-60, -80);
         noStroke();
 
         // Tail (two triangles make the fork)
@@ -177,7 +229,7 @@ function drawObject(dream) {
 
     } else if (currentDream.object.shape === "clock") {
         push();
-        translate(-250, 100); // left and lower
+        translate(-280, 150); // left and lower
         noStroke();
 
         // Base
