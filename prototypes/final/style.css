@@ -1,0 +1,81 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1028, #3b1f5e, #14304a, #2b1450);
+    background-size: 400% 400%;
+    animation: drift 25s ease infinite;
+    font-family: "Quicksand", sans-serif;
+}
+
+@keyframes drift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 25% 70%, #fff, transparent),
+        radial-gradient(2px 2px at 40% 35%, #ffe9a8, transparent),
+        radial-gradient(1.5px 1.5px at 55% 85%, #fff, transparent),
+        radial-gradient(2px 2px at 70% 15%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 85% 60%, #ffe9a8, transparent),
+        radial-gradient(2px 2px at 92% 90%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 5% 90%, #fff, transparent);
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+/* Title */
+h1 {
+    margin: 0;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: #f3e8ff;
+    text-shadow: 0 0 12px rgba(190, 130, 255, 0.9),
+                 0 0 30px rgba(190, 130, 255, 0.5);
+}
+
+.hint {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    color: #cdb8ee;
+    opacity: 0.8;
+}
+
+/* The canvas: glowing frame, scales to fit the window */
+canvas {
+    display: block;
+    border-radius: 16px;
+    border: 2px solid rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 25px rgba(190, 130, 255, 0.5),
+                0 0 80px rgba(120, 80, 200, 0.35);
+    max-width: 95vw;
+    height: auto !important;
+    cursor: pointer;
+}

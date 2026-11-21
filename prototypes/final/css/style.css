@@ -9,12 +9,74 @@ Also hides overflow.
 
 **********************************************/
 
+/* Reset and animated dreamy background */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  display: grid; /* Set up the grid and justify/align to center */
-  justify-content: center;
-  align-content: center;
-  height: 100vh; /* Body is the height of the viewport */
-  overflow: hidden; /* Hide anything that goes off the window size */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    background-color: #010428;
+    background-size: 400% 400%;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Twinkling stars behind everything */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 25% 70%, #fff, transparent),
+        radial-gradient(2px 2px at 40% 35%, #ffe9a8, transparent),
+        radial-gradient(1.5px 1.5px at 55% 85%, #fff, transparent),
+        radial-gradient(2px 2px at 70% 15%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 85% 60%, #ffe9a8, transparent),
+        radial-gradient(2px 2px at 92% 90%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 5% 90%, #fff, transparent);
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+/* Title */
+h1 {
+    margin: 0;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: #f3e8ff;
+    text-shadow: 0 0 12px rgba(190, 130, 255, 0.9),
+                 0 0 30px rgba(190, 130, 255, 0.5);
+}
+
+.hint {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    color: #cdb8ee;
+    opacity: 0.8;
+}
+
+/* The canvas: glowing frame, scales to fit the window */
+canvas {
+    display: block;
+    border-radius: 16px;
+    border: 2px solid rgba(212, 175, 55, 0.6);   /* thin gold border */
+    box-shadow: 0 0 25px rgba(190, 130, 255, 0.5),
+                0 0 80px rgba(120, 80, 200, 0.35);
+    max-width: 95vw;
+    max-height: 80vh;
+    width: auto !important;
+    height: auto !important;
+    cursor: pointer;
 }
