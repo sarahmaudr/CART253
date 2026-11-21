@@ -23,10 +23,23 @@ I hope someone playing it will feel curious and calm, and want to keep clicking 
 ![Website Preview](assets/images/finalWeek1.png)
 
 ## Week 2
+This week I worked on drawing the objects and adding a permanent magical door to the scene. Last week the program could already pick a location, an object and a feeling from the JSON file. This week I made the objects actually appear on the canvas.
 
+I decided to draw every object with basic shapes only: ellipse, rect, triangle, arc and line. The whale is a big ellipse body with a smaller ellipse toward the tail, two triangles for the tail, a lighter belly made with arc, a flipper and a small water spout. I also drew a grandfather clock, a full moon with dark craters, a butterfly, and an old mirror inspired by the Mirror of Erised from Harry Potter.
 
+I replaced the stairs with the moon. A door and stairs both suggest "going somewhere", so they competed with each other. I also wanted a key, but I decided to keep it for later, because I plan to make it hide on the screen so the user has to find it and drag it onto the door to unlock it. That is not built yet.
 
-![Website Preview](images/)
+The door is in its own drawDoor() function, outside drawObject(), so it is always on screen. It is purple with a glowing star and sparkles that pulse using sin(frameCount). I made it bigger and centered, with translate() and scale().
+
+The mirror was the most interesting part. I wanted two tall mirrors, one on each side of the door, but only when the object is a mirror. I remembered that I don't have to write the code twice. I wrote one function, drawMirror(x, y, s), with the position and size as parameters, and I call it twice. I also changed the mirror from an oval to an old one with a dark gold frame.
+
+I ran into a few bugs. My first whale didn't show because I used translate() twice, once in draw() and once inside the object, and the two added up and pushed it off the canvas. And my side mirrors didn't float like the other objects, because I had drawn them outside the translate() in draw(). I fixed that by calling them from inside drawObject().
+
+What I find difficult is keeping track of where the origin is after each translate(). Using push() and pop() helps, but I still have to think carefully about which coordinates I'm using.
+
+Next, I want to build the hidden key.
+
+![Website Preview](assets/images/finalWeek2.png)
 
 ## Week 3
 
