@@ -74,7 +74,7 @@ function draw() {
     // The object floats gently up and down
     push();
     translate(width / 2, 350 + sin(frameCount * 0.03) * 12);
-    //drawObject(currentDream.object.shape);
+    drawObject(currentDream);
     pop();
 
     //drawFeeling(currentDream);
@@ -100,7 +100,7 @@ function drawLocation(dream) {
             ellipse(d.x, d.y, d.size * 1.5, d.size * 0.6);
             ellipse(d.x + d.size * 0.3, d.y - d.size * 0.15, d.size, d.size * 0.6);
         }
-       } else if (dream.location.type === "forest") {
+    } else if (dream.location.type === "forest") {
         fill(60, 40, 30);
         rect(0, 650, width, 150); // ground
         for (let d of dream.decor) {
@@ -121,5 +121,74 @@ function drawLocation(dream) {
         noStroke();
         fill(230, 210, 150);
         rect(0, 720, width, 80); // sand
+    }
+}
+
+function drawObject(dream) {
+    
+    //Whale
+    if (dream.object.shape === "whale") {
+        push();
+        translate(-60, 0); // draw() already centers the object
+        noStroke();
+
+        // Tail (two triangles make the fork)
+        fill("#16424a");
+        triangle(190,-10, 310, -80, 295, 20);   // upper fluke
+        triangle(190, 10, 310, 80, 295, -20);     // lower fluke
+
+        // Body
+        fill("#16424a");
+        ellipse(0, 0, 340, 180);
+
+        // Narrow part of the body leading to the tail
+        ellipse(40, 0, 390, 160);
+
+        // Belly (lighter bottom half)
+        fill("#e8f1f8");
+        arc(-20, 5, 290, 160, 0, PI, CHORD);
+
+        // Flipper
+        fill("#16424a");
+        ellipse(-20, 60, 100, 40);
+
+        // Eye
+        fill("black");
+        ellipse(-115, -15, 12, 12);
+        fill("white");
+        ellipse(-113, -17, 4, 4);
+
+        // Water spout
+        fill(255, 255, 255, 200);
+        ellipse(20, -75, 14, 22);
+        ellipse(-10, -65, 14, 14);
+        ellipse(50, -60, 14, 14);
+
+        pop();
+    }
+
+    else if (dream.object.shape === "door") {
+        fill("orange");
+            ellipse(0,0,100,100);
+        
+
+    } else if (currentDream.object.shape === "clock") {
+        fill("red");
+            ellipse(200,100,100,100);
+        
+
+    } else if (dream.object.shape === "stairs") {
+        fill("green");
+            ellipse(200,100,100,100);
+        
+
+    } else if (dream.object.shape === "butterfly") {
+        fill("yellow");
+            ellipse(200,100,100,100);
+        
+        
+    } else if (dream.object.shape === "mirror") {
+        fill("blue");
+            ellipse(200,100,100,100);
     }
 }
